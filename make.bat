@@ -5,5 +5,4 @@ latex %ARTICLE%.tex
 gbk2uni %ARTICLE%
 latex %ARTICLE%.tex
 dvipdfmx %ARTICLE%.dvi
-pause
-start %ARTICLE%.pdf
+start "" "C:\Program Files\SumatraPDF\SumatraPDF.exe" ./%ARTICLE%.pdf
