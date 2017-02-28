@@ -1,8 +1,8 @@
 set ARTICLE=template
-latex %ARTICLE%.tex
+latex --enable-pipes %ARTICLE%.tex
 bibtex %ARTICLE%
-latex %ARTICLE%.tex
+latex --enable-pipes %ARTICLE%.tex
 gbk2uni %ARTICLE%
-latex %ARTICLE%.tex
+latex --enable-pipes %ARTICLE%.tex
 dvipdfmx %ARTICLE%.dvi
 start "" "C:\Program Files\SumatraPDF\SumatraPDF.exe" ./%ARTICLE%.pdf
