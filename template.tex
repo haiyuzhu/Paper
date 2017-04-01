@@ -41,6 +41,8 @@
 \usepackage{enumitem}
 \usepackage{graphicx}
 \usepackage{subfigure}
+\usepackage{algorithm}
+\usepackage{algorithmic}
 
 \usepackage{environ}
 \NewEnviron{myequation}{%
@@ -387,6 +389,64 @@ $\psi_p$ 的作用是处于某个区域中有相似运动的像素点更有可能属于同一个肢体部位。
 
 
 \section{稠密三维重建}
+\label{pipline_dense_rec}
+
+通过对每一帧上的人体进行运动学的分类，利用相邻帧之间的稠密光流我们得到不同身体部位在相邻帧上的像素点之间的对应关系。
+我们之所以选择用光流来获取点的对应关系，是因为在实际的情况中因身体部位的形变、肢体的运动会导致常见的特征检测只能得到十分稀疏的特征点对，特征点数量过少导致重建问题欠约束而无法求解。
+换而言之，目前存在的特征检测方法只适用于静态场景，无法对包含非刚性形变的场景进行特征匹配。
+我们把获取到的图像序列划分成许多较短的时间段，在这些时间段中对于某个特定的身体部位表面的形变就可以忽略不计，这样我们就把人体的非刚性重建转换成某个时间段中各个身体部位的刚性重建，也就可以使用从运动到结构的经典方法来获取人体不同部位的不同时间段的三维模型。
+我们对不同身体部位进行三维重建的步骤通过算法~\ref{algo:dense_rec}进行了详细的说明。
+
+\begin{algorithm}[h]
+\caption{\textbf{Dense Reconstruction of Body Parts}}
+\label{algo:dense_rec}
+\begin{algorithmic}[1]
+\STATE{$i$: the frame number of the input image}\vspace{6pt}
+\STATE{$l_i^b$: the 2D barycenter of $B_b$ in the frame $f_i$}\vspace{6pt}
+\STATE{$f_b$: the number of start frame of part $B_b$, denoted as ref for simplification}\vspace{6pt}
+\FOR{$b\leftarrow 1 ~\TO ~16$}\vspace{6pt}
+\IF{$\|l_i^b-l_{ref}^b\|>$ 30}\vspace{6pt}
+\STATE{$T_{ref}^b \leftarrow T_{ref}^{'}$}\vspace{6pt}
+\FOR{$j\leftarrow f_b+1 ~\TO ~i$}\vspace{6pt}
+\STATE{$T_j^b\leftarrow\Delta{T_{ref\to{j}}^b}T_{ref}^b$}\vspace{6pt}
+\STATE{derive dense optical flow from $f_{ref}$ to $f_j$ }\vspace{6pt}
+\ENDFOR \vspace{6pt}
+\STATE{$P^b\leftarrow \min E_{BA}$}\vspace{6pt}
+\STATE{$f_b\leftarrow f_i$}\vspace{6pt}
+\ENDIF \vspace{6pt}
+\ENDFOR
+\end{algorithmic}
+\end{algorithm}
+
+算法~\ref{algo:dense_rec}中 $f_i$表示 RGB 相机获取到的图像序列中的第 $i$ 帧图像，$B_i$ 表示人体上第 $i$ 个身体部位。
+对于每个身体部位，我们认为它在较短时间内的运动是刚性的，因为身体部位表面的形变在这么短的时间内太小以致可以忽略不计。
+我们使用 LDOF(Large Displacement Optical Flow)~\cite{brox2011large}算法计算不同帧之间亚像素级的稠密光流，并用稠密光流来跟踪身体部位在这较短时间内的运动，从而也就获得图像上身体部位点的对应关系。
+当任意身体部位在图像上的连续运动距离超过阈值(20个像素)时，例如，身体部位 $B_b$ 的运动距离超过阈值时，我们选取 $f_b$ 帧(身体部位 $B_b$ 在图像上开始运动) 到 $f_i$ (身体部位 $B_b$ 在图像上的运动距离达到阈值)帧之间的所有帧，利用 $f_b$ 帧到 $f_i$ 帧之间相邻帧间的稠密光流获取到像素点之间的对应关系，我们利用光束平差法(Bundle Adjustment)就可以获取身体部位 $B_b$ 的三维模型。
+身体部位在图像上运动范围的阈值是通过最小化公式~\ref{eqn:BA}中的重投影误差来确定的。
+当设置的阈值过小，进行重建时的短基线就会过短，从而导致算出点的深度值不精确，在公式~\ref{eqn:BA}中体现为重投影误差较大。
+如果设置的阈值过大，所选取的帧数就会较多，身体部位表面的非刚性形变较大而不能忽略，那么模型的重投影误差也会较大。
+所以为了获得比较理想的阈值，我们先选一个比较小的阈值，然后将阈值逐渐增大。选取整个过程中重投影误差最小时的阈值作为我们最终的结果。
+我们用 $\pi$ : $\Re^3\to\Re^2$ 表示投影函数，因此光束平差法的目标函数就是：
+
+\begin{equation}\label{eqn:BA}
+  E_{BA}=\sum_{j=f_b}^{i} \sum_{k \in B_b} \| p_{j}^k - \pi \left( r_j^bP_k + t_j^b \right) \|^2
+\end{equation}
+其中帧的索引是从 $f_b$ 变化到 $f_{i}$。
+身体部位 $B_b$ 上第 $k$ 个点的三维空间位置我们用 $P_k$ 来表示，点 $P_k$ 在第 $j$ 帧上的投影是 $p_{j}^k$。
+$T_j^b=\left[r_j^b|t_j^b\right]$ 表示相机在第 $j$ 帧时拍摄身体部位 $B_b$ 时相对的相机位置。
+这里相机的相对位置 $T_j^b$ 是区别于相机的绝对位置 $T_j^\ast$ 的，相机相对位置不仅包含了身体部位 $B_b$ 的运动还包含了相机本身的运动。
+以身体部位 $B_b$ 的运动为例，我们可以将参考帧 $f_b$ 对应的人体三维骨架驱动到当前帧 $j$ 帧下就可以获得相机对于身体部位 $B_b$ 的相对位置变换矩阵 $\Delta{T_{f_b\to{j}}^b}$。
+因此，相机相对位置 $T_j^b = \Delta{T_{f_b\to{j}}^b} T_{f_b}^\ast$。
+
+我们使用稀疏光束平差法~\cite{lourakis2009sba}来最小化代价函数~\eqref{eqn:BA}，并且所有点的初始深度值设定为2米到4米之间的随机值。
+图~\ref{fig:dense_recons_gao}展示了我们利用亚像素级的稠密点对应关系重建出的不同身体部位的稠密模型。
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.8\textwidth]{figures/dense_reconstruction_gao.pdf}
+  \caption{七个身体部位的稠密重建结果}
+  \label{fig:dense_recons_gao}%please reference in the main text before presenting
+\end{figure}
+
 
 \subsection{对应点匹配}
 
