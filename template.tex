@@ -51,6 +51,8 @@
 \end{equation}
 }
 
+\usepackage{booktabs}
+
 \begin{document}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -487,7 +489,7 @@ SCAPE ÉÏÇ°¾°²¿·Ö²ÎÓëÈÚºÏµÄµãÊýÊÇ 2689£¬Òò´ËµÃµ½µÄÆ½¾ùÈÚºÏÎó²î½ö½öÎª 0.8 mm¡£
 \end{figure}
 
 \subsection{Ä£ÐÍ¸ÕÐÔ¡¢·Ç¸ÕÐÔ³É·Ö·Ö½â}
-\label{pipline_calc_rigid_comp}
+\label{sec:pipline_calc_rigid_comp}
 
 Ã¿´Î SCAPE Ä£ÐÍºÍÖØ½¨³öÀ´µÄÖ«Ìå²¿Î»³íÃÜÄ£ÐÍÈÚºÏ¶¼»áµÃµ½Ò»¸ö SCAPE Ä£ÐÍµÄÊµÀý£¬ÎÒÃÇ½«µÃµ½µÄËùÓÐ SCAPE ÊµÀý½áºÏÆðÀ´ÍÆµ¼³öÊµÀý¼äµÄ±ä»»¾ØÕó£¬Í¨¹ý¶Ô±ä»»¾ØÕó½øÐÐ·Ö½â¶øµÃµ½ÈËÌåÄ£ÐÍÔË¶¯¹ý³ÌÖÐµÄ¸ÕÐÔ³É·ÖºÍ·Ç¸ÕÐÔ³É·Ö¡£
 ÎÒÃÇÄ£ÐÍµÄÐÎ±ä¼ÆËãÊÇÊ¹ÓÃÀàËÆÓÚÑµÁ· SCAPE Ê±ËùÓÃµÄ·½·¨£¬ÎÒÃÇÕâÀïµÄ SCAPE ÊµÀý¾ÍÀàËÆÓÚ~\cite{anguelov2005scape}ÖÐÑµÁ·¼¯¡£
@@ -522,12 +524,94 @@ $\omega_d=1e^{-3}$ ²»½ö¿ÉÒÔÓÃÀ´±ÜÃâÏàÁÚÈý½ÇÃæÆ¬¼ä·¢Éú½Ï´óµÄÐÎ±ä£¬»¹¼õÉÙ³íÃÜÄ£ÐÍÉ
 µ±ÎÒÃÇ»ñµÃµÄÊµÀýÊýÁ¿×ã¹»¶àÊ±£¬ÎÒÃÇ¿ÉÒÔÍ¨¹ý PCA(Principal Component Analysis)ºÜÈÝÒ×µÄÍÆµ¼³öÄ£ÐÍÔË¶¯¹ý³ÌÖÐµÄ·Ç¸ÕÐÔ³É·Ö $\beta^j$¡£
 
 \chapter{½á¹ûºÍÌÖÂÛ}
+\label{sec:results}
+
+ÎªÁË¼ìÑéÈýÎ¬ÈËÌå¶¯Ì¬ÖØ½¨ÏµÍ³µÄÂ³°ôÐÔºÍÓÐÐ§ÐÔ£¬ÎÒÃÇÔÚÒ»¸ö°üº¬ 30 ¸öÈË½øÐÐ²»Í¬ÔË¶¯µÄÊý¾Ý¼¯ÉÏ²âÊÔÁËÎÒÃÇµÄÖØ½¨ÏµÍ³¡£
+ÎÒÃÇµÄÏµÍ³ÊÇÊ¹ÓÃ MATLAB ÓïÑÔÔÚÒ»Ì¨Åä±¸ Intel Core i7 Ö÷Æµ 3.4 GHz£¬24 GB RAM µÄÌ¨Ê½ÉÏ¿ª·¢ºÍÔËÐÐµÄ¡£
+Êý¾Ý¼¯ÖÐËùÓÐµÄÊÓÆµ¶¼ÊÇÊ¹ÓÃÍ¬Ò»¸ö·Ö±æÂÊÎª $1920\times1080$ µÄ SONY CX260 ÔÚÍ¼~\ref{fig:setup} ÖÐµÄ»·¾³ÏÂÅÄÉãµÄ¡£
+Ã¿¸öÊÓÆµ´óÔ¼°üº¬ 450 Ö¡Í¼Ïñ¡£
+Ò»°ãÇé¿öÏÂ£¬ÎÒÃÇÃ¿ 10 Ö¡¿ÉÒÔ»ñÈ¡Ò»¸ö SCAPE Ä£ÐÍÊµÀý£¬²¢ÇÒËùÓÐµÄÊý¾Ý¶¼ÊÇÀëÏßµÄÇé¿öÏÂÔÚÉÏÊöÌ¨Ê½»úÉÏ´¦ÀíµÄ¡£
+ÎªÁËÆÀ¹ÀÏµÍ³ÖØ½¨³öÀ´µÄ¾«¶È£¬ÎÒÃÇ·Ö±ðÊ¹ÓÃÎÒÃÇµÄ·½·¨¡¢KinectFusion ºÍ Yu µÈÈË~\cite{yu2015direct}Ìá³öµÄµ¥Ä¿ÊÓ¾õ·Ç¸ÕÐÔÖØ½¨Ëã·¨½øÐÐÁË¶¨ÐÔºÍ¶¨Á¿µÄ¶Ô±È¡£
+´ËÍâ£¬ÎÒÃÇ»¹½«ÎÒÃÇµÄ·½·¨¸ú Xu µÈÈË~\cite{xu2013measuring}Ìá³öµÄÔÚÈËÌå´ó·ù¶ÈÔË¶¯ÏÂÊ¹ÓÃ Kinect ²âÁ¿ÈËÌåÌåÐÍ²ÎÊýµÄ·½·¨½øÐÐµÄ¶Ô±È¡£
+
+
+\begin{figure}[h]
+ \centering
+ \includegraphics[width=0.8\textwidth]{figures/setup.pdf}
+ \caption{ÊµÑé»·¾³¡£ÎÒÃÇÖ»ÐèÒªÒ»¸öÆÕÍ¨µÄÏà»úÔÚºÏÊÊµÄ¾àÀëÏÂÅÄÉãÈËÌåµÄÔË¶¯¡£}
+ \label{fig:setup}
+\end{figure}
+
+\section{ÏµÍ³²ÎÊý}
+\label{sec:parameters}
+
+ÎÄÕÂÇ°ÃæµÄÕÂ½ÚÖÐÃ»ÓÐÏêÏ¸ËµÃ÷¹«Ê½ÖÐÒ»Ð©²ÎÊýµÄ¾ßÌåÊýÖµ£¬ÔÚÎÒÃÇµÄÊµÑéÖÐÕâÐ©²ÎÊý¶¼±»ÉèÖÃÎª¹Ì¶¨µÄÖµ£¬¾ßÌå²Î¿¼±í~\ref{tb:tabel_parameter}
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{lccc}
+  \toprule
+  {\textbf{¹«Ê½}} &  &  {\textbf{²ÎÊýÖµ}}  & \\%please add, or you may reform the table.
+  \midrule
+  ¹«Ê½~\eqref{eqn:classifier}                 & {$~~~\omega_s = 5/16$} & {$~~~\omega_j = 1/16$} & {$\omega_m = 5/8~$}\\
+  \midrule
+  ¹«Ê½~{\eqref{eqn:clas_sil}~\eqref{eqn:clas_joint}~\eqref{eqn:clas_move}} & $\theta_s = 60$   & $\theta_j = 60$   & $\rho_d = 0.5$\\
+  \midrule
+  ¹«Ê½~\eqref{eqn:pair_wise}                  & $\theta_\alpha = 60$ & $\theta_\beta = 25$  &\\
+  \bottomrule
+  \end{tabular}
+  \caption{ÊÔÑéÖÐÖØ½¨ÏµÍ³Ïà¹Ø²ÎÊýµÄ¾ßÌåÊýÖµ¡£}\label{tb:tabel_parameter}
+\end{table}
+
+¶ÔÓÚ±í~\ref{tb:tabel_parameter}ÖÐÇ°Á½ÐÐÎÒÃÇÓÐ 6 ¸ö²ÎÊýÐèÒªÈ·¶¨ÊýÖµ£¬µ«ÊÇ $\rho_d$ ±»ÉèÖÃÎª 0.5 À´¹éÒ»»¯¹«Ê½~\ref{eqn:clas_move}ÖÐµÄÔË¶¯ÏîÄÜÁ¿¡£
+´ËÍâ£¬ÒòÎª~\eqref{eqn:classifier}ÖÐ $\omega_s + \omega_j + \omega_m = 1$£¬ Òò´Ë£¬ÎÒÃÇÖ»ÐèÒªÈ·¶¨ $\omega_s$£¬$\omega_j$£¬$\theta_s$ ºÍ $\theta_j$ µÄÊýÖµ¡£
+ÊÜ Kr{\"a}henb{\"u}hl ºÍ Koltun ÔÚÎÄÕÂ~\cite{krahenbuhl2012efficient}ÖÐÈ·¶¨ºËº¯Êý²ÎÊýÊýÖµ·½·¨µÄÆô·¢£¬ÎÒÃÇÊ¹ÓÃ¸úËûÃÇÀàËÆµÄ·½·¨À´È·¶¨±í~\ref{tb:tabel_parameter}ÖÐËùÌáµ½µÄ²ÎÊýÖµ¡£
+¾ßÌå¹ý³Ì¾ÍÊÇ£ºÊ×ÏÈ£¬ÎÒÃÇÊÖ¶¯±ê¶¨Í¬Ò»¸öÈË²»Í¬×ËÌ¬ÏÂ 20 ÕÅÍ¼Æ¬µÄÉíÌå²¿Î»×÷Îª¶ÔÕÕÊý¾Ý£»È»ºóÔÚ¸Ä±ä $\omega_s$£¬$\omega_j$£¬$\theta_s$ ºÍ $\theta_j$ ÖµµÄÍ¬Ê±Çó½â¹«Ê½~\eqref{eqn:classifier}£¬µÃµ½ 20 ÕÅÍ¼Æ¬ÉÏÉíÌå²¿Î»µÄ·ÖÀà½á¹û£¬²¢¼ÆËãÉíÌå²¿Î»·ÖÀàµÄÎó²îÖµ£»×îÖÕÑ¡È¡Îó²î×îÐ¡Ê±µÄ $\omega_s$£¬$\omega_j$£¬$\theta_s$£¬$\theta_j$Öµ¡£
+×îºóÔÙÓÃÍ¬ÑùµÄ·½·¨À´È·¶¨ $\theta_\alpha$ ºÍ $\theta_\beta$ µÄÊýÖµ¡£
+
 
 \section{¶¨ÐÔ·ÖÎö}
+\label{sec:qualitative_analysis}
+
+ÔÚÍ¼~\ref{fig:results}ÖÐÎÒÃÇÕ¹Ê¾ÁËÏµÍ³ÖØ½¨³öÁ½×éÊý¾ÝÖÐ²»Í¬ÈËÔÚ²»Í¬×ËÌ¬Ê±µÄÈýÎ¬Ä£ÐÍ¡£
+¾¡¹ÜÎÒÃÇÃ»ÓÐÊ¹ÓÃÓÅ»¯Ëã·¨ºÍ¾Ö²¿ËÑË÷Ëã·¨À´½øÒ»²½ÓÅ»¯µÃµ½µÄÈËÌåÈýÎ¬×ËÌ¬£¬ÎÒÃÇµÄÏµÍ³È´»¹ÊÇ´ÓÍ¼ÏñÐòÁÐÖÐ»Ö¸´³öÏà¶Ô×¼È·µÄÈËÌå×ËÌ¬¡£
+ÎÒÃÇµÄÏµÍ³²¢²»ÐèÒªÔË¶¯¶ÔÏóµÄÏÈÑéÖªÊ¶¾Í¿ÉÒÔÖØ½¨³ö´øÓÐÏ¸½ÚµÄÈËÌåÈýÎ¬Ä£ÐÍ£¬ÏµÍ³µÄ·º»¯ÄÜÁ¦±È½ÏÇ¿¡£
+
+Í¼ÖÐµÚ¶þÐÐµÄÔË¶¯Ñ§·ÖÀà½á¹ûËµÃ÷ÁËÎÒÃÇÔË¶¯Ñ§·ÖÀàÆ÷ÊÇ±È½Ï×¼È·ºÍÂ³°ôµÄ¡£
+ÕýÈçÍ¼ÖÐµÚÈýÐÐËùÕ¹Ê¾µÄ£¬ÎÒÃÇµÄ SCAPE Ä£ÐÍºÍÄ¿±êÈËÌåµÄÈýÎ¬Ä£ÐÍµÄÏàËÆ¶ÈÊÇÊ®·ÖµÍµÄ£¬Ò²¾ÍÊÇËµÎÒÃÇµÄÏµÍ³ÔÚ²»ÐèÒª¶ÔÈËÌåÌáÇ°½øÐÐ²âÁ¿µÄÇé¿öÏÂ¾Í¿ÉÒÔ½øÐÐÖØ½¨ÈËÌåÄ£ÐÍ£¬²àÃæÌåÏÖÁËÎÒÃÇµÄÏµÍ³µÄÇ±ÔÚÓ¦ÓÃ³¡¾°ºÜ¹ã·º¡£
+¶ÔÓÚ²»Í¬Ê±¼ä¶Î»ñÈ¡µÄÉíÌå²¿Î»Ä£ÐÍ¸ú SCAPE Ä£ÐÍÈÚºÏµÄ½á¹û£¬ÎÒÃÇ·Ö±ðÓÃ²»Í¬µÄÑÕÉ«ÔÚ¶ÔÓ¦µÄ SCAPE ÊµÀýÖÐ±ê×¢³öÀ´ÁË¡£
+ÎÒÃÇÍ¨¹ý²»¶Ï´¦Àí¸ü¶àµÄÍ¼Æ¬À´¸üÐÂÖØ½¨³öÀ´µÄÈËÌåÈýÎ¬Ä£ÐÍ£¬Ëæ×Å´¦ÀíµÄÍ¼Æ¬ÊýÁ¿µÄÔö¼ÓÄ£ÐÍµÄ¾«¶ÈÒ²Öð½¥Ìá¸ß¡£
+×îºóÎÒÃÇ½«Ä£ÐÍÇý¶¯µ½²»Í¬Ö¡ÖÐÈËÌå¶ÔÓ¦µÄ×ËÌ¬ÏÂ£¬ÔÚ¼ÓÈëµ±Ç°Ö¡ÖÐÈËÌåÔË¶¯µÄ·Ç¸ÕÐÔ³É·ÖÖ®ºó¾ÍµÃµ½ÓµÓÐÏ¸½ÚµÄÈËÌåÈýÎ¬Ä£ÐÍ£¬½á¹ûÈçÍ¼ÖÐ×îºóÒ»ÐÐËùÊ¾¡£
+
+\begin{figure}[h]
+ \centering
+ \includegraphics[width=\textwidth ]{figures/zhu_gao_result.pdf}
+ \caption{{¶¯Ì¬ÈËÌåÈýÎ¬ÖØ½¨½á¹û¡£ Í¼ÖÐµÚÒ»ÐÐÊÇÍ¼ÏñÐòÁÐÖÐµÄ²¿·ÖÖ¡£»µÚ¶þÐÐÊÇ¶þÎ¬µÄÈËÌåÔË¶¯Ñ§·ÖÀà½á¹û£»µÚÈýÐÐÊÇ½« SCAPE Ä£ÐÍºÍµ±Ç°Ö¡ÖØ½¨³öÀ´µÄÉíÌå²¿Î»Ä£ÐÍ½øÐÐÈÚºÏµÃµ½µÄ SCAPE ÊµÀý£¬²»Í¬µÄÉíÌå²¿Î»ÎÒÃÇÓÃ²»Í¬µÄÑÕÉ«½øÐÐÁË±ê×¢£»×îºóÒ»ÐÐÊÇ½«×îÖÕÖØ½¨³öµÄÈËÌåÄ£ÐÍÇý¶¯µ½µ±Ç°Ö¡µÄ×ËÌ¬ÏÂ²¢¼ÓÉÏµ±Ç°Ö¡µÄ·Ç¸ÕÐÔ³É·ÖµÃµ½µÄÄ£ÐÍ¡£}}
+ \label{fig:results}
+\end{figure}
+
+Ä¿Ç°×îÐÂµÄ·Ç¸ÕÐÔ¶¯Ì¬ÖØ½¨·½·¨ÊÇÓÉ YuµÈÈË~\cite{yu2015direct}Ìá³öµÄ£¬ËûÃÇÏÈÈÃÖØ½¨Ä¿±ê±£³Ö¹Ì¶¨×ËÌ¬Ê¹ÓÃ´ÓÔË¶¯µ½½á¹¹µÄ¾­µäËã·¨»ñÈ¡Ä¿±ê³íÃÜµÄÈýÎ¬Ä£ÐÍ×÷ÎªÄ£°å£¬È»ºóÖØ½¨Ä¿±ê¿ªÊ¼ÔË¶¯²¢ÖØ½¨³öÃ¿Ò»Ö¡ÉÏÄ¿±êµÄÈýÎ¬Ä£ÐÍ¡£
+ºÜÃ÷ÏÔËûÃÇµÄËã·¨ÐèÒªÏÈÈÃÖØ½¨Ä¿±ê¾²Ö¹ÒÔ»ñµÃÄ¿±êµÄ³õÊ¼ÈýÎ¬Ä£ÐÍ£¬ÕâÊ¹µÃËûÃÇËã·¨µÄÓ¦ÓÃ³¡¾°ÓÐËùÏÞÖÆ¡£
+Ïà±È½Ï¶øÑÔ£¬ÎÒÃÇÊ¹ÓÃµÄ SCAPE Ä£ÐÍÊÇÒ»¸ö±È½ÏÍ¨ÓÃµÄÄ£ÐÍ£¬²¢ÇÒ¶ÔÓÚÖØ½¨ÈËÌåÄ£ÐÍÊ±²»ÒªÈËÈ¥¿ÌÒâÅäºÏ£¬ÄÜ¹»Ìá¸ß»ñÈ¡ÈËÌåÄ£ÐÍÊ±µÄÓÃ»§ÌåÑé¡£
+´ËÍâ£¬ËûÃÇÔÚÎÄÕÂÖÐËùÑÝÊ¾µÄÊÂÀý¶¼ÊÇ´Ó±È½Ï½üµÄÊÓ½ÇÈ¥ÖØ½¨Ò»¸ö±È½ÏÐ¡µÄÎïÌå£¬ÀýÈçÊÖ¡¢²¼ÍÞÍÞ¡£
+ÎÒÃÇÊ¹ÓÃÎÒÃÇµÄÊý¾Ý¼¯¶ÔËûÃÇµÄËã·¨½øÐÐÁË²âÊÔ±È½Ï£¬½á¹ûÈçÍ¼~\ref{fig:compare_iccv}ËùÊ¾¡£
+¾¡¹ÜÎÒÃÇÍ¨¹ý³íÃÜÖØ½¨Ëã·¨»ñÈ¡µ½ÁËÁ½¸ö¸ßÖÊÁ¿µÄÈËÌåÄ£ÐÍ£¨Í¼~\ref{fig:compare_iccv}ÖÐ×îºóÒ»ÐÐµÚÒ»¸öºÍµÚËÄ¸öÍ¼£©£¬ËûÃÇµÄËã·¨È´ÒÀ¾É²»ÄÜÖØ½¨³ö½ÏºÃµÄÈËÌåÄ£ÐÍ£¨Í¼~\ref{fig:compare_iccv}ÖÐ×îºóÒ»ÐÐ£©£¬²¢ÇÒËæ×ÅÈËÌåÔË¶¯·ù¶ÈµÄÔö´óËûÃÇÖØ½¨³öÀ´µÄÄ£ÐÍÉÏµÄÔëÉùµãÔ½À´Ô½¶à¡£
+·ÖÎöËûÃÇËã·¨²»ÄÜÖØ½¨ÈËÌåÄ£ÐÍµÄÔ­ÒòÊÇ£¬ËûÃÇÃ¿Ò»Ö¡µÄÄ£ÐÍÖØ½¨¶¼ÊÇÍ¨¹ý¶Ô×î³õµÄÄ£°å½øÐÐÐÎ±ä¶øµÃµ½£¬ÓÉÓÚËûÃÇµÄÄ£ÐÍÇý¶¯²¢²»ÊÇÍ¨¹ý¹Ç÷ÀÀ´Çý¶¯µÄ£¬ËùÒÔËæ×ÅÈËÌåÔË¶¯·ù¶ÈµÄÔö´ó²»ÄÜ½«³õÊ¼Ä£°å±ä»»µ½µ±Ç°ÈËÌåµÄ×ËÌ¬ÏÂÃæ£¬×îÖÕµ¼ÖÂÄ£ÐÍÉÏµÄÔëÉùµãÔ½À´Ô½¶à£¬Ä£ÐÍµÄÖÊÁ¿Ô½À´Ô½µÍ¡£
+Ïà·´£¬ÎÒÃÇÈ´¿ÉÒÔÔÚÊ¹ÓÃÍ¬Ò»¸ö SCAPE Ä£ÐÍµÄÇ°ÌáÏÂ£¬³ä·ÖÀûÓÃÈËÌåÔË¶¯Ëù´øÀ´µÄÐÅÏ¢²»¶ÏÓÅ»¯Ä£ÐÍµÄ¾«¶È£¬×îÖÕµÃµ½¸ßÖÊÁ¿µÄÈËÌåÄ£ÐÍ£¨ÈçÍ¼~\ref{fig:compare_iccv}ÖÐµÚ¶þÐÐ£©¡£
+´ËÍâ£¬ÎÒÃÇµÄ SCAPE Ä£ÐÍ»¹ÄÜ²¹È«Ã¿Ò»Ö¡ÖÐ²»¿É¼û²¿Î»µÄÐÎ×´£¬¶ø Yu µÄ·½·¨ÖØ½¨³öÀ´µÄÄ£ÐÍÖ»ÊÇÈËÌå±»ÅÄµ½²¿·ÖµÄÈýÎ¬Ä£ÐÍ¡£
+ºÁÎÞÒÉÎÊ£¬ÎÒÃÇµÄÏµÍ³ÊÇÄ¿Ç°Î¨Ò»ÄÜ¹»Í¨¹ýµ¥¸öÆÕÍ¨Ïà»ú¸ßÐ§ÖØ½¨¶¯Ì¬ÈËÌåÈýÎ¬Ä£ÐÍµÄÏµÍ³¡£
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=\textwidth]{figures/compare_iccv.pdf}
+  \caption{Á½¸öÍ¼ÏñÐòÁÐµÄ¶Ô±È½á¹û¡£µÚÒ»ÐÐÊÇÁ½×éÍ¼Æ¬ÐòÁÐÖÐµÄ²¿·ÖÖ¡£»ÖÐ¼äÒ»ÐÐÊÇÎÒÃÇ½«×îÖÕÖØ½¨³öÀ´µÄÄ£ÐÍÇý¶¯µ½µÚÒ»ÐÐÍ¼Æ¬¶ÔÓ¦×ËÌ¬ÏÂµÄ½á¹û£»×îºóÒ»ÐÐÊÇÊ¹ÓÃ Yu µÄ·½·¨µÃµ½¶ÔÓ¦Í¼Æ¬ÏÂµÄ¶Ô±È½á¹û¡£}
+  \label{fig:compare_iccv}
+\end{figure}
+
 
 \section{¶¨Á¿·ÖÎö}
 
-\section{¶Ô±È}
+\section{Ëã·¨¸´ÔÓ¶È·ÖÎö}
 
 \chapter{½áÂÛ}
 
