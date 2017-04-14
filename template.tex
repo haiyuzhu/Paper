@@ -610,10 +610,74 @@ $\omega_d=1e^{-3}$ ²»½ö¿ÉÒÔÓÃÀ´±ÜÃâÏàÁÚÈý½ÇÃæÆ¬¼ä·¢Éú½Ï´óµÄÐÎ±ä£¬»¹¼õÉÙ³íÃÜÄ£ÐÍÉ
 
 
 \section{¶¨Á¿·ÖÎö}
+\label{sec:quantitative_analysis}
+
+¸ù¾ÝÎÒÃÇµÄµ÷ÑÐ£¬Ä¿Ç°»¹Ã»ÓÐÏµÍ³ÄÜÓÃµ¥¸ö RGB Ïà»úÖØ½¨³öÒ»¸ö¶¯Ì¬ÈËÌåµÄÈýÎ¬Ä£ÐÍ£¬Òò´ËÎÒÃÇ½«µÃµ½µÄÄ£ÐÍºÍ KinectFusion µÄ½á¹û½øÐÐ±È½Ï£¬²¢·ÖÎöÎÒÃÇÏµÍ³ÖØ½¨Ä£ÐÍµÄÎó²î¡£
+ÈËÌåµÄÕæÊµÄ£ÐÍÊÇÍ¨¹ý KinectFusion É¨Ãè¾²Ö¹Ê±ºòµÄÈËµÃµ½µÄ¡£
+ÎÒÃÇÊ¹ÓÃµÄÄ£°åÊÇÓÉ 12500 ¸öµãºÍ 25000 ¸öÃæ×é³É¡£
+ÎªÁËµÃµ½±È½Ï×¼È·µÄÖØ½¨Îó²î£¬ÎÒÃÇÏÈ½«Ä£ÐÍÇý¶¯µ½ KinectFusion ½á¹ûµÄÏàÍ¬×ËÊÆÏÂ£¬½Ó×ÅÓÃ¸ÕÐÔ ICP(Iterative Closest Point) ½«Ä£ÐÍµÄÕýÃæ¸ú KinectFusion µÄ½á¹û½øÐÐÅä×¼£¬È»ºó½«¶ÔÓ¦µãÖ®¼äµÄÅ·Ê½¾àÀë×÷ÎªÄ£ÐÍµÄÖØ½¨Îó²î²¢½«ÆäÓ³Éäµ½É«²Ê¿Õ¼äÒÔÖ±¹ÛµÄÕ¹ÏÖ¸÷²¿Î»µÄÖØ½¨Îó²î¡£
+ÈçÍ¼~\ref{fig:compare_KF}ËùÊ¾£¬Í¼ÖÐµÚÒ»ÐÐÊÇµÚÒ»¸öÍ¼ÏñÐòÁÐµÄÖØ½¨½á¹û£¬ËüµÄÆ½¾ùÖØ½¨Îó²îÖ»ÓÐ 0.3 ÀåÃ×£»Í¼ÖÐµÚ¶þÐÐÊÇµÚ¶þ¸öÍ¼ÏñÐòÁÐµÄÖØ½¨½á¹û£¬ÆäÆ½¾ùÖØ½¨Îó²îÖ»ÓÐ 0.2 ÀåÃ×¡£
+²¢ÇÒÎÒÃÇÏµÍ³µÄ×î´óÖØ½¨Îó²îÖ»ÓÐ 1.5 ÀåÃ×£¬²¢ÇÒÖ»³öÏÖÔÚÄ£ÐÍÉÏÒ»¸öºÜÐ¡ÇøÓò£¬¶ÔÄ£ÐÍµÄÓ¦ÓÃÓ°Ïì²»´ó¡£
+¶ÔÓÚµÚÒ»¸öÍ¼ÏñÐòÁÐÀ´Ëµ£¬ÖØ½¨Îó²î½Ï´óµÄ²¿·ÖÖ÷Òª³öÏÖÔÚÄ£ÐÍµÄÑü²¿£¬´ÓÍ¼~\ref{fig:results}ÖÐ×ó±ß²¿·ÖÍ¼Æ¬¿ÉÒÔ¿´³ö£¬ÒòÎªÈËÎïÉí´©µÄÒÂ·þÔÚÑü²¿×îÎª¿íËÉ£¬ËùÒÔ¶ÔÓ¦Ä£ÐÍÑü²¿µÄ·Ç¸ÕÐÔ³É·Ö½ÏÎª·á¸»£¬ÖØ½¨Îó²îÏà¶Ô½Ï´ó¡£
+ËäÈ»µÚ¶þ¸öÍ¼ÏñÐòÁÐÖÐÈËµÄÖ«ÌåÔË¶¯¸úµÚÒ»¸ö²»Ò»Ñù£¬ÈçÍ¼~\ref{fig:results}£¬µ«ÊÇÓÉÓÚµÚ¶þ¸öÈËµÄÒÂ×Å±È½ÏÌùÉí£¬ËùÒÔµÚ¶þ¸öÍ¼ÏñÐòÁÐµÄÖØ½¨Îó²îÏà¶Ô½ÏÐ¡¡£
+
+\begin{figure}[h]
+ \centering
+ \includegraphics[width=\textwidth]{figures/compare_KF.pdf}
+ \caption{²»Í¬Ä£ÐÍµÄÖØ½¨Îó²î¡£}
+ \label{fig:compare_KF}
+\end{figure}
+
+ÎÒÃÇµÃµ½µÄÄ£ÐÍ¿ÉÒÔÓ¦ÓÃµ½Ðí¶àµÄÁìÓò£¬ÓÈÆäÊÇÐéÄâÊÔÒÂ¡£
+ÔÚÎÒÃÇµÄÊµÑéÖÐ£¬ÎÒÃÇÖØ½¨ÁË 30 ¸ö²»Í¬µÄÈËÌåÄ£ÐÍ£¬²¢ÇÒÓÃ Xu µÈÈË~\cite{xu2013measuring}Ê¹ÓÃµÄ·½·¨²âÁ¿ÁËÄ£ÐÍµÄÉíÌå²ÎÊý¡£
+ÎÒÃÇ¼ÆËãÁË 30 ¸öÈËÌåÄ£ÐÍµÄÉíÌå²ÎÊýÎó²î²¢½«½á¹ûºÍ Xu µÄ·½·¨½øÐÐÁË±È½ÏÏ¸ÖÂµÄ¶Ô±È£¬Èç±í~\ref{tab:comparison_with_xu}ËùÊ¾¡£
+¾¡¹Ü£¬Xu µÄ·½·¨Ê¹ÓÃÁËÉî¶ÈÏà»úÀ´¸ÄÉÆÈËÌå²ÎÊý²âÁ¿µÄÎó²î£¬µ«ÊÇÎÒÃÇµÄÏµÍ³¸úËûÃÇÏà±ÈÓÐ½Ï¸ßµÄ¾«¶ÈºÍÒ×ÓÃÐÔ£ºÔÚ½ö½öÊ¹ÓÃÒ»¸ö RGB Ïà»úµÄÇé¿öÏÂ£¬ÎÒÃÇÏµÍ³ÔÚÈËÌåÐØÎ§¡¢ÉÏ°ëÉí³¤¶È¡¢´óÍÈÖÜ³¤µÄ²âÁ¿ÉÏµÄÆ½¾ùÎó²î¶¼±È Xu µÄ·½·¨Ð¡¡£
+\begin{table}[h]
+ \centering
+ \scalebox{.8}[.8]{\begin{tabular}{cccccc}
+ \toprule
+{ \textbf{Errors} }     & \textbf{Arm Length}  & \textbf{Chest Girth}   & \textbf{Neck to Hip Distance} & \textbf{Hip Girth}  & \textbf{Thigh Girth} \\
+ \midrule
+ Error of Xu's (cm) & \textbf{1.2} & 3.2      & 4.5         & \textbf{3.1} & 2.1    \\
+
+ Error of Ours (cm) & 1.4     & \textbf{2.3}  & \textbf{3.7}     & 3.3     & \textbf{1.9}\\
+ \bottomrule
+ \end{tabular}}
+ \caption{ÖØ½¨Ä£ÐÍµÄÉíÌå²ÎÊý¶Ô±È¡£}
+ \label{tab:comparison_with_xu}
+\end{table}
+
+´ËÍâ£¬ÎÒÃÇ»æÖÆÁËÄ£ÐÍµÄÆ½¾ùÖØ½¨Îó²îºÍÊÓÆµÖ¡ÊýÖ®¼äµÄ¹ØÏµÍ¼À´ÑÐ¾¿ÊäÈëÊÓÆµµÄÖ¡Êý¶ÔÖØ½¨Ä£ÐÍ¾«¶ÈµÄÓ°Ïì£¬ÈçÍ¼~\ref{fig:mean_error}¡£
+´ÓÍ¼~\ref{fig:mean_error}¿ÉÒÔ¿´³ö£¬400 Ö¡Ö®Ç°Ëæ×ÅÊÓÆµÖ¡ÊýµÄÔö¼ÓÖØ½¨Ä£ÐÍµÄÆ½¾ùÎó²î²»¶Ï¼õÐ¡£»µ«ÊÇ 400 Ö¡ÒÔºó£¬Ëæ×ÅÖ¡ÊýµÄÔö¼ÓÄ£ÐÍµÄÆ½¾ùÎó²îÏÂ½µ²»Ã÷ÏÔÖð½¥Ç÷ÓÚÎÈ¶¨¡£
+Òò´Ë£¬ÎªÁË±£Ö¤Ä£ÐÍµÄ¾«¶È£¬ÎÒÃÇÔÚÓ¦ÓÃÖÐ»ñÈ¡µÄÊÓÆµÖ¡Êý×îºÃ´óÓÚ 400 Ö¡¡£
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.9\textwidth]{figures/error_frames.pdf}
+\caption{ÖØ½¨Ä£ÐÍºÍ KinectFusion Ö®¼äµÄÆ½¾ùÖØ½¨Îó²î¡£ºá×ø±ê±íÊ¾²ÎÓëÖØ½¨µÄÍ¼ÏñÊýÁ¿¡£×Ý×ø±ê±íÊ¾Ä£ÐÍµÄÆ½¾ùÖØ½¨Îó²î¡£Ëæ×Å²ÎÓëÖØ½¨µÄÍ¼ÏñÊýÄ¿Ôö¼Ó£¬Ä£ÐÍµÄÆ½¾ùÖØ½¨Îó²îÖð½¥½µµÍ²¢Ç÷ÓÚÎÈ¶¨¡£}
+\label{fig:mean_error}
+\end{figure}
 
 \section{Ëã·¨¸´ÔÓ¶È·ÖÎö}
+\label{sec:computation}
 
-\chapter{½áÂÛ}
+ÓÉÓÚ 3D ×ËÌ¬ÌáÈ¡¡¢³íÃÜ¹âÁ÷»ñÈ¡¡¢³íÃÜÌõ¼þËæ»ú³¡¡¢¹âÊøÆ½²îµÄ¼ÆËãÁ¿¶¼ºÜ´ó£¬Òò´ËÎÒÃÇµÄÏµÍ³»¹²»ÄÜ×öµ½ÊµÊ±£¬´¦ÀíÊý¾ÝÖ»ÄÜ½øÐÐÀëÏß´¦Àí¡£
+µ±Ç°Çé¿öÏÂÃ¿´¦ÀíÒ»Ö¡Í¼ÏñÐèÒª´óÔ¼ 8 ·ÖÖÓÊ±¼ä£¬ÆäÖÐÔË¶¯Ñ§·ÖÀàºÄ·Ñ´óÔ¼ 5 ·ÖÖÓÊÇÃ¿Ö¡Í¼Ïñ´¦Àí¹ý³ÌÖÐºÄÊ±×î¶àµÄÒ»²¿·Ö¡£
+ÔÚÎÒÃÇµÄÊµÑéÖÐ£¬ÎÒÃÇ·¢ÏÖ×îºÄÊ±µÄ²½ÖèÊÇÈËÌå×ËÌ¬ÌáÈ¡ºÍÔË¶¯Ñ§·ÖÀà£¬ÕâÁ½ÕßµÄÊ±¼ä¿ªÏú¼ÓÆðÀ´Õ¼¾ÝÁËÕûÌå¼ÆËãÊ±¼äµÄ 90\%¡£
+¸ù¾ÝÎÄÏ×~\cite{yang2011articulated}µÄ·ÖÎö£¬×ËÌ¬ÌáÈ¡µÄÊ±¼ä¸´ÔÓ¶ÈÊÇ $O(N)$£¬ÆäÖÐ $N$ ÊÇÍ¼ÏñµÄ³ß´ç¡£
+ÎÄÏ×~\cite{krahenbuhl2012efficient}ÏêÏ¸²ûÊöÁË³íÃÜÌõ¼þËæ»ú³¡µÄ¾ßÌåÊµÏÖ£¬Çó½â³íÃÜÌõ¼þËæ»ú³¡ÎÊÌâÖ÷ÒªÓÉÏûÏ¢´«µÝ£¨Message Passing£©¡¢Ò»ÖÂÐÔ×ª»»£¨Compatibility Transform£©ºÍ¾Ö²¿¸üÐÂ£¨Local Update£©×é³É¡£
+ÆäÖÐ¼ÆËãÆ¿¾±Ö÷ÒªÊÇÏûÏ¢´«µÝ£¬ÊÇÓÃÒ»¸öÊ±¼ä¸´ÔÓ¶ÈÎª $O(N)$ µÄ¸ßÎ»ÂË²¨Ëã·¨ÊµÏÖµÄ£¬ÆäÖÐ $N$ ÊÇÍ¼ÏñµÄ³ß´ç¡£
+×ÛÉÏËùÊö£¬ÎÒÃÇÏµÍ³µÄÕûÌåÊ±¼ä¸´ÔÓ¶ÈÎª $O(Nn)$£¬ÆäÖÐ $n$ ÊÇÏµÍ³´¦ÀíµÄÍ¼ÏñÖ¡Êý¡£
+
+¾¡¹ÜÄ¿Ç°ÎÒÃÇµÄÏµÍ³»¹ÊÇ±È½ÏºÄÊ±µÄ£¬µ«ÊÇËüµÄÈ·ÊÇµÚÒ»¸öÍ¨¹ýÆÕÍ¨ RGB Ïà»ú×Ô¶¯ÖØ½¨³ö¶¯Ì¬ÈËÌåÈýÎ¬Ä£ÐÍµÄÏµÍ³¡£
+´ËÍâ£¬ÓÉÓÚÍ¼ÏñÐòÁÐÉÏ²»Í¬Ê±¼ä¶ÎÖ®¼äÊÇÃ»ÓÐÓ°ÏìµÄ£¬Òò´ËÎÒÃÇµÄÏµÍ³ÊÇ¿ÉÒÔ½øÐÐ²¢ÐÐ»¯µÄ£¬ÎÒÃÇÏÂÒ»²½µÄ´òËã¾ÍÊÇ½«ÏµÍ³½øÐÐ²¢ÐÐ»¯²¢ÓÃ GPU ½øÐÐ¼ÓËÙ£¬Ìá¸ßÏµÍ³ÕûÌåµÄÔËËãËÙ¶È¡£
+
+\chapter{×Ü½áÓëÕ¹Íû}
+\label{sec:conclusion}
+
+\section{×Ü½á}
+
+\section{Õ¹Íû}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% ¸½¼þ²¿·Ö
@@ -644,31 +708,26 @@ $\omega_d=1e^{-3}$ ²»½ö¿ÉÒÔÓÃÀ´±ÜÃâÏàÁÚÈý½ÇÃæÆ¬¼ä·¢Éú½Ï´óµÄÐÎ±ä£¬»¹¼õÉÙ³íÃÜÄ£ÐÍÉ
 \noindent {\heiti »ù±¾Çé¿ö}
 \vspace{1ex}
 
-\noindent ÑîÎÄ²©£¬ÄÐ£¬ºº×å£¬1986~Äê~11~ÔÂ³öÉú£¬ºÓÄÏÊ¡ÃñÈ¨ÏØÈË¡£
+\noindent Öìº£Óî£¬ÄÐ£¬ºº×å£¬1991~Äê~8~ÔÂ³öÉú£¬½­ËÕÊ¡Ì©ÖÝÈË¡£
 
 \vspace{2ex}
 \noindent {\heiti ½ÌÓý±³¾°}
 
 \begin{description}[labelindent=0em, leftmargin=8em, style=sameline]
 
-\item[2007.9¡«2010.6] ÖÐ¹ú¿ÆÑ§ÔºÑÐ¾¿ÉúÔºÐÅÏ¢°²È«¹ú¼ÒÖØµãÊµÑéÊÒ \hfill Ë¶Ê¿
+\item[2014.9¡«2017.6] ÄÏ¾©´óÑ§µç×Ó¿ÆÑ§Óë¹¤³ÌÑ§ÔºÍ¼Ïñ¹¤³ÌÊµÑéÊÒ \hfill Ë¶Ê¿
 
-\item[2003.9¡«2007.6] ÄÏ¾©´óÑ§ÊýÑ§Ïµ \hfill ±¾¿Æ
+\item[2010.9¡«2014.6] ÄÏ¾©´óÑ§µç×Ó¿ÆÑ§Óë¹¤³ÌÑ§Ôº \hfill ±¾¿Æ
 
 \end{description}
 
 % ·¢±íÎÄÕÂÄ¿Â¼
 \vspace{5ex}
-\begin{Publications}{2}
+\begin{Publications}{1}
 
-\item Wenbo Yang and Wen Tao Zhu, ``Voting-on-Grid Clustering for Secure
-  Localization in Wireless Sensor Networks,'' in \emph{Proc. IEEE
-  International Conference on Communications (ICC) 2010}, May. 2010.
+\item SCI~2~ÇøÂÛÎÄ£ºZhu H, Yu Y, Zhou Y, Du S. Dynamic Human Body Modeling Using a Single RGB Camera. Sensors. 2016;16(3):402.
 
-\item Wenbo Yang and Wen Tao Zhu, ``Protecting Source Location Privacy in
-Wireless Sensor Networks with Data Aggregation,'' in \emph{Proc. 7th
-International Conference on Ubiquitous Intelligence and Computing (UIC) 2010},
-Oct. 2010.
+\item ·¢Ã÷×¨Àû£ºÒ»ÖÖ×Ô¶¯ÈËÌåÈýÎ¬ÖØ½¨ÏµÍ³£¬³ýµ¼Ê¦ÍâµÚÒ»Íê³ÉÈË¡£
 
 \end{Publications}
 
@@ -686,12 +745,27 @@ Oct. 2010.
 \end{enumerate}
 
   % ÖÂÐ»
-%\begin{thanks}
-%\vskip 18pt
-%
-%Ê×ÏÈ¸ÐÐ»XXX
-%
-%\end{thanks}
+\Nchapter{ÖÂÐ»}
+\vskip 18pt
+
+Ê×ÏÈ¸ÐÐ»ÎÒµÄÖ¸µ¼ÀÏÊ¦ÓÚÒ«ÀÏÊ¦£¬ÔÚÎÒÑÐ¾¿Éú½×¶ÎËû²»½ö¸øÓèÁËÎÒÏ¤ÐÄµÄÖ¸µ¼£¬½Ì»áÁËÎÒ½øÐÐ¿ÆÑ§ÑÐ¾¿µÄÒ»°ã·½·¨£¬ÈÃÎÒ¶Ô¼ÆËã»úÊÓ¾õÁìÓòÈýÎ¬ÖØ½¨ÎÊÌâÓÐÁË½ÏÉîµÄÀí½â£¬»¹ÔÚ¾ßÌåµÄ¿ÆÑÐÏîÄ¿ÖÐÆô·¢Ê½Ö¸µ¼ÎÒ½â¾öËùÓöµ½µÄÎÊÌâ£¬ÈÃÎÒÔÚÊµ¼ùÖÐÐÎ³ÉÁË×Ô¼ºµÄ·½·¨ÂÛ¡£
+ÔÚ¸úÓÚÀÏÊ¦ÌÖÂÛ SCAPE Ä£ÐÍµÄ¼ÆËã¹ý³ÌÖÐ£¬¸ÐÊÜµ½ÁËÓÚÀÏÊ¦ÑÏ½÷Ï¸ÖÂµÄÖÎÑ§Ì¬¶È£¬Ñ§Ï°ÁËÓÚÀÏÊ¦¸ßÖÊÁ¿µÄÊµÏÖ´úÂë£¬ÊÕ»ñÆÄ·á¡£
+ËäÈ»¼ÆËã»úÊÓ¾õÁìÓòµÄÖªÊ¶Ò»Ö±ÔÚ¿ìËÙµÄµü´ú¸üÐÂ£¬µ«ÊÇÓÚÀÏÊ¦½Ì»áµÄ·½·¨È´×ãÒÔÈÃÎÒÊÜÒæÖÕÉí¡£
+Óë´ËÍ¬Ê±£¬ÎÒ»¹Òª¸ÐÐ»¶¼Ë¼µ¤½ÌÊÚ¡¢ÖÜÓà¸±½ÌÊÚ£¬ËûÃÇ²»½ö°ïÖúÎÒ½â¾öÑ§Ï°¡¢¿ÆÑÐÉÏÓöµ½µÄÄÑÌâ£¬»¹¹ØÐÄÎÒÉú»îÉÏËùÓöµ½µÄÀ§ÄÑ¡£
+ËûÃÇÔÚÎÒµÄÑÐ¾¿Éú½×¶ÎµÄ¿ÆÑÐ¹ý³ÌÖÐÒ²¸øÓèÁË´óÁ¿µÄÖ¸µ¼ºÍ°ïÖú£¬Ê¹µÃÎÒÔÚ½øÈëÊµÑéÊÒ²»¾Ã¾Í½øÈëÁË×´Ì¬£¬ÕÒµ½ÁË×Ô¼º¸ÐÐËÈ¤µÄÁìÓò£¬²¢ÊÕ»ñÁËÒ»¶¨µÄ³É¹û¡£
+¸úÈýÎ»ÀÏÊ¦Ò»ÆðÑ§Ï°¼ÆËã»úÊÓ¾õµÄ»ù´¡ÖªÊ¶ºÍÑÐ¶ÁÈËÌå½¨Ä£µÄÇ°ÑØÎÄÕÂµÄÊ±¹âÈ·ÊµÊÇÁîÈË»³ÄîºÍÄÑÍüµÄ¡£
+
+½ÓÏÂÀ´£¬ÎÒÒ²Òª¸ÐÐ»Í¼Ïñ¹¤³ÌÊµÑéÊÒµÄËùÓÐÍ¬Ñ§£¬ÓÈÆäÊÇ¸ßÖ®ÈªÍ¬Ñ§¡¢ÌÆ±þÏþÍ¬Ñ§¡¢ÀîÔÆÍ¬Ñ§¡¢³ÂÏ£Í¬Ñ§£¬ÔÚºÍËûÃÇµÄ½»Á÷Ñ§Ï°ÖÐ£¬ËûÃÇ×ÜÊÇÀÖÓÚ·ÖÏí×Ô¼ºµÄÖªÊ¶¡¢¹ÛµãºÍÀí½â£¬ÈÃÎÒ´ÓÖÐÑ§µ½ÁËÐí¶àÖªÊ¶ºÍ·½·¨²¢·¢ÏÖÁË×ÔÉíµÄ²»×ã¡£
+ÔÚºÍ¸ßÖ®ÈªÍ¬Ñ§Ò»Æð²É¼¯ÈËÌåÔË¶¯Êý¾ÝµÄÈÕ×ÓËäÈ»ºÜÐÁ¿à£¬µ«Ëû»¹ÊÇ×ÐÏ¸ÈÏÕæµØ°ïÎÒ²É¼¯Êý¾Ý£¬¼õÉÙÁËÎÒÐí¶àµÄ¹¤×÷Á¿¡£
+Ã¿Ò»¸ö¿ÆÑÐ³É¹ûµÄ±³ºó£¬¶¼ÓÐÒ»Ö§»¥Ïà°ïÖú¡¢»ý¼«½»Á÷¡¢Ö÷¶¯·ÖÏí¡¢ÍÅ½á»¥ÖúµÄÓÅÐãÍÅ¶Ó¡£
+
+ËäÈ»±¾¿Æ½×¶ÎµÄÎ¢µç×ÓÖªÊ¶¸úÑÐ¾¿Éú½×¶ÎµÄÑÐ¾¿ÄÚÈÝ²»Ïà¸É£¬µ«ÊÇÄÇÐ©ÖªÊ¶ÍØ¿íÁËÎÒµÄÊÓÒ°£¬Ê¹ÎÒµÄË¼Â·¸ü¼Ó¿ªÀ«¡£
+ÔÚÕâÀïÒª¸ÐÐ»±¾¿ÆËùÓÐµÄÀÏÊ¦£¬ËûÃÇ¸÷¾ßÌØÉ«¡¢ÈÏÕæÑÏ½÷µÄ½ÌÑ§ÈÃÎÒÖÕÉíÄÑÍü¡£
+
+×îºó£¬¸ÐÐ»ÄÏ¾©´óÑ§µç×Ó¿ÆÑ§Óë¹¤³ÌÑ§Ôº 14 ¼¶È«ÌåÍ¬Ñ§£¬ÕâÊÇÒ»¸ö³äÂú°®¡¢ÍÅ½á»¥ÖúµÄ¼¯Ìå¡£
+ÔÚ¶ÌÔÝµÄÑÐ¾¿ÉúÉú»îÖÐ£¬Ã¿´ÎÓöµ½À§ÄÑ×Ü»áÓÐÈË¸øÓèÎÒÎÞË½µÄ°ïÖú¡£
+ÔÚ´Ë£¬ÎÒÏë¶Ô´ó¼ÒËµÒ»ÉùÐ»Ð»£¬¸úÄãÃÇÔÚÒ»ÆðµÄÈÕ×ÓºÜ¿ìÀÖ£¬×îºóÖÔÐÄµØ×£Ô¸´ó¼ÒÇ°³ÌËÆ½õ¡£
+
 
 
 \end{document}
