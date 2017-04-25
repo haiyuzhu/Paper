@@ -154,19 +154,102 @@ Experimental results show that our shape estimation method achieves comparable a
 \section{三维人体建模概述}
 
 人体三维建模在游戏、计算机动画和虚拟试衣等领域都有着广泛的应用，并且在虚拟感知、计算机视觉和计算机图形学中它始终是学者们不断探讨的热点问题。
-在过去的几十年中，学者们探索出了许多种方法来获取人体的三维模型，例如借助深度传感器获取深度图来重建人体三维模型~\cite{dou20153d,newcombe2015dynamicfusion,newcombe2011kinectfusion,zeng2013templateless,zhang2014quality}，利用三维的扫描仪获取人体三维模型的~\cite{anguelov2005scape,werghi2007segmentation}，还有借助多视角重建完成人体三维重建的~\cite{gall2009motion,huang2014human,liu2013markerless,robertini2014efficient,zollhofer2014real}~模板。
+在过去的几十年中，学者们探索出了许多种方法来获取人体的三维模型，例如利用三维的扫描仪获取人体三维模型的~\cite{anguelov2005scape,werghi2007segmentation}，借助深度传感器获取深度图来重建人体三维模型~\cite{newcombe2011kinectfusion,Izadi2011KinectFusion, weiss2011home,tong2012scanning,zeng2013templateless,zhang2014quality,dou20153d,newcombe2015dynamicfusion}，利用多视角重建完成人体三维重建的~\cite{gall2009motion,liu2013markerless,huang2014human,robertini2014efficient,zollhofer2014real}。
+随着人们对模型获取成本及便捷性要求越来越高，近年来也出现了利用单个相机重建出人体三维模型的方法~\cite{guan2009estimating,hasler2010multilinear,jain2010moviereshape,zhou2010parametric,liu2013markerless,huang2014human,yu2015direct}。
 这些方法的提出旨在更准确、更加快速的获取人体的三维模型。
 
 \subsection{深度相机人体三维建模}
 \label{sec:depth_sensor_modeling}
 
-最近几年像Kinect这类深度相机的出现，使得我们可以通过深度图或者RGB-D图像重建出物体的三维模型。
-Newcombe等人~\cite{newcombe2011kinectfusion}~实现了一个名为KinectFusion的系统，它可以重建出场景比较精细的三维模型。
-但是这个系统是有限制的，它需要借助深度相机并且只能应用于静态的场景。
-基于此，Li, Tong, Weiss, Zeng等人~\cite{li20133d,tong2012scanning,weiss2011home,zeng2013templateless}~把这个系统应用到人体三维模型重建中，只要我们拿着Kinect绕着一个保持固定姿势的人转一圈我们就可以得到这个人的三维模型。
-Zhang等人~\cite{zhang2014quality}~利用Kinect获取同一个人在不同姿势下的三维模型，然后将这些模型进行融合从而训练出这个人的参数化人体三维模型，之后就可以用这个参数化的模型模拟出这个人在各种姿态下的三维模型。
-Newcombe等人~\cite{newcombe2015dynamicfusion}~拓展了KinectFusion的应用场景，他们利用稠密体变换场(Dense Volumetric Warp-field)，借助Kiect相机可以重建出动态人的三维模型。
-Bogo等人~\cite{bogodetailed}~提出了一个名为Delta的多分辨率人体模型，可以从单目的RGB-D图像序列中恢复出动态人体的三维模型，并借助三维模型和图片上纹理随时间的变化来优化模型的体型。
+最近几年像~Kinect(如图~\ref{fig:Kinect}~)这类深度相机的出现，使得我们可以通过深度图或者RGB-D图像重建出物体的三维模型。
+\begin{figure}[ht]
+  \centering
+  % Requires \usepackage{graphicx}
+  \includegraphics[width=\textwidth]{figures/Kinect.jpg}
+  \caption{Kinect相机。从左往右依次是~Kinect~一代和二代。}
+  \label{fig:Kinect}
+\end{figure}
+Kinect~上有红外发射器、红外接收器、RGB~相机三个主要传感器，红外发射器配合红外接收器可以获得场景的深度信息，而~RGB~相机主要是获取场景的颜色信息。
+Kinect~可以提供最大帧率~30fps~的深度图和彩色图，它的对环境的适应能力强、精度较高、价格低廉，性价比很高。
+Kinect~2代在一代的基础上将彩色图片的分辨率提高到了~$1920 \times 1080$~，并提高了深度信息的精度。
+
+Newcombe~等人~\cite{newcombe2011kinectfusion}~，Izadi~等人\cite{Izadi2011KinectFusion}~实现了一个名为~KinectFusion~的系统。
+KinectFusion主要由四个部分组成（\ref{fig:KinectFusion}）：(a)、预处理阶段。将从~Kinect~获取到的深度图转换成点云，并计算出每个点的法线；(b)、三维场景表面更新。通过跟踪新的深度图获取到的~Kinect~姿态信息将当前帧的点云融合到用截断有向距离函数(TSDF,Truncated Signed Distance Function)表示的场景中去；(c)、表面预测。通过光线投射到整个场景的~TSDF~上，预测出场景的表面结构，进而将当前帧的点云融合到整个场景中去，从而实现~Kinect~姿态跟踪和场景表面更新的闭环；(d)、Kinect~姿态估计。通过多尺度的迭代最近邻算法将预测出来的场景表面跟~Kinect~得到的场景结构进行配准从而计算出~Kinect~的姿态信息。
+\begin{figure}[ht]
+  \centering
+  % Requires \usepackage{graphicx}
+  \includegraphics[width=\textwidth]{figures/KF_pipeline.pdf}
+  \caption{KinectFusion系统流程。}
+  \label{fig:KinectFusion}
+\end{figure}
+通过~GPU~加速~KinectFusion~可以实时重建出场景比较精细的三维模型，但是它只适用于重建静态场景的三维模型。
+
+使用~KinectFusion~重建人体模型是比较困难的，因为~KinectFusion~只能重建静态场景的三维模型，而在人体扫描的过程中人很难保持绝对的静止，这就给人体模型重建带来了很大的挑战。
+基于~Kinect~的人体三维重建或多都借鉴了~KinectFusion~的思路，他们大多利用某时刻人体局部的三维模型来恢复人体完整的三维模型。
+但是从局部恢复整体的问题本身就是一个欠约束的问题，所以为了解决这样一个欠约束的问题，目前的解决方法主要有基于模板的方法，如~\cite{weiss2011home,li20133d,tong2012scanning,zhang2014quality}。
+还有一些方法是不需要人体模板就可以重建出人体三维模型的。
+例如，将人体模型看作拟刚性物体(quasi-rigid object)~\cite{zeng2013templateless}，将非刚性问题向刚性问题转换；用稠密体变换场(Dense Volumetric Warp-field)表示模型形变~\cite{newcombe2015dynamicfusion}；提出新的参数化多分辨率模型~\cite{bogodetailed}；利用非刚性光束平差法对人体模型进行全局优化~\cite{dou20153d}。
+基于模型的方法能够适应人体更多复杂的姿势，但是在和模型融合的过程中会丢失深度信息中的高频部分，使得最终得到的模型不够精细。
+而其他的重建方法可以尽可能多的保留人体表面的细节，但带来的问题就是在某些极端姿势的情况下系统可能无法获得精细的人体模型。
+
+Weiss~等人~\cite{weiss2011home}~利用~Kinect~获取到的深度信息结合人体的轮廓、姿态等信息计算出人体的体型参数，接着用人体体型参数驱动参数化模型~SCAPE(Shape Completion and Animation for PEople)~得到目标人体参数化的三维模型。
+
+Li~等人~\cite{li20133d}~用一个~Kinect~从不同的角度扫描一个人近似姿态的三维模型，然后将不同角度得到的模型融合到一起得到一个完整的人体模型。
+每次扫描时都要讲从~Kinect~获取到的多帧深度信息进行融合来降低模型的噪声，接着将人和背景分割开，得到当前角度下人体的三维模型。
+由于人在~Kinect~前面旋转时姿势不可能保持一样，所以不同视角下获得的模型肯定包含了许多形变和不连续。
+所以他们就将某一视角下的人体模型作为模板，并将其他视角下的人体模型用刚性、非刚性融合算法将模型融合到模板中，最后利用配准过程中得到的对应关系做全局的优化得到完整的人体模型。
+
+Tong~等人~\cite{tong2012scanning}~将多个视角不重叠的~Kinect~按图~\ref{fig:DepthSensor_Tong}中位置放置。
+在第一帧时用~Kinect~获取的深度信息先重建出一个比较粗糙的模板，然后将模板和当前帧下人体模型进行融合。
+当人体旋转一周之后就进行全局的融合来降低人体姿态变化带来的误差。
+最后将每一帧下形变之后的模板驱动到第一帧下并利用泊松重建得到一个完整的人体模型。
+\begin{figure}[ht]
+  \centering
+  % Requires \usepackage{graphicx}
+  \includegraphics[width=\textwidth]{figures/DepthSensor_Tong.jpg}
+  \caption{Tong~等人~\cite{tong2012scanning}的人体三维重建环境。}
+  \label{fig:DepthSensor_Tong}
+\end{figure}
+
+Zhang~等人~\cite{zhang2014quality}~利用~KinectFusion~获取同一个人在不同姿势下的三维模型，如图~\ref{fig:DepthSensor_Zhang}~中(a)。
+然后将这些模型结合人体姿态信息从而训练出这个人的参数化人体三维模型，如图~\ref{fig:DepthSensor_Zhang}~中(b)。
+最后只要知道某些姿态下的深度图和人体姿态就可以驱动参数模型得到当前姿态下精细的人体模型。
+\begin{figure}[ht]
+  \centering
+  % Requires \usepackage{graphicx}
+  \includegraphics[width=\textwidth]{figures/DepthSensor_Zhang.jpg}
+  \caption{Zhang~等人~\cite{zhang2014quality}人体模型重建算法。}
+  \label{fig:DepthSensor_Zhang}
+\end{figure}
+
+Zeng~等人~\cite{zeng2013templateless}~把人体模型看成很多小刚性块的组成，并且模型的非刚性形变用“图”来表示这样就降低了问题的复杂度。
+算法具体过程如图~\ref{fig:DepthSensor_Zeng}~所示：
+（1）、Kinect获取的每帧深度信息都用模型到部分(Model-to-part Menthod)的方法将“图”融合到深度信息上。
+（2）、融合之后，对深度信息进行采样并将其融合进“图”中并更新“图”的拓扑信息。
+（3）、融合不同帧所有的深度信息之后就做全局的非刚性变换，将所有的空间点依据“图”变换到最后一帧中。
+（4）、最后通过泊松重建得到完整的人体模型。
+\begin{figure}[H]
+  \centering
+  % Requires \usepackage{graphicx}
+  \includegraphics[width=\textwidth]{figures/DepthSensor_Zeng.jpg}
+  \caption{Zeng~等人~\cite{zeng2013templateless}人体模型重建算法。}
+  \label{fig:DepthSensor_Zeng}
+\end{figure}
+
+Newcombe~等人~\cite{newcombe2015dynamicfusion}~拓展了~KinectFusion~的应用场景，他们利用稠密体变换场(Dense Volumetric Warp-field)和正则空间(Canonical Space)使得利用~Kinect~可以重建出动态人的三维模型。
+他们的算法的具体过程如图~\ref{fig:DepthSensor_DynamicFusion}所示。图中（a）、（b）是他们从~Kinect~得到的深度图，（d）、（e）是重建出来的稠密模型。
+他们通过变换正则空间的模型到当前帧的深度图而得到稠密体变换场的参数，接着利用得到的稠密体变换场将当前深度图融合到正则空间，图（d，f）。
+与此同时，变换场用一系列系数~6D~变换点来表示，并通过~K~近邻差值得到平滑的正则空间帧，图（c）。
+最终，利用刚得到的正则空间帧就可以补全当前帧的模型，得到实时的动态的三维模型，图（e)。
+\begin{figure}[ht]
+  \centering
+  % Requires \usepackage{graphicx}
+  \includegraphics[width=\textwidth]{figures/DepthSensor_DynamicFusion.jpg}
+  \caption{Newcombe~等人~\cite{newcombe2015dynamicfusion}人体模型重建算法。}
+  \label{fig:DepthSensor_DynamicFusion}
+\end{figure}
+
+Bogo等人~\cite{bogodetailed}~扩展了~SCAPE~模型提出了一个名为“Delta”的多分辨率人体模型。通过从单目的RGB-D图像序列中恢复出动态人体的体型参数，结合高分辨率位移图获取人体表面的细节得到精细的人体三维模型。
 Dou等人~\cite{dou20153d}~通过非刚性光束平差法(Non-rigid Bundle Adjustment)优化最终模型的体型和每一帧模型的非刚性参数，从而使得系统能够获取动态的并且包含大量非刚性运动的动态物体的三维模型。
 
 \subsection{多视角人体三维建模}
