@@ -195,7 +195,7 @@ Experiments show that our single-camera dynamic human body reconstruction system
 \subsection{Éî¶ÈÏà»úÈýÎ¬ÈËÌå½¨Ä£}
 \label{sec:depth_sensor_modeling}
 
-×î½ü¼¸ÄêÏñ~Kinect~£¨ÈçÍ¼~\ref{fig:Kinect}~£©ÕâÀàÉî¶ÈÏà»úµÄ³öÏÖ£¬Ê¹µÃÎÒÃÇ¿ÉÒÔÍ¨¹ýÉî¶ÈÍ¼»òÕßRGB-DÍ¼ÏñÖØ½¨³öÎïÌåµÄÈýÎ¬Ä£ÐÍ¡£
+×î½ü¼¸ÄêÏñ~Kinect~£¨ÈçÍ¼~\ref{fig:Kinect}~£©ÕâÀàÉî¶ÈÏà»úµÄ³öÏÖ£¬Ê¹µÃÎÒÃÇ¿ÉÒÔÍ¨¹ýÉî¶ÈÍ¼»òÕß~RGB-D~Í¼ÏñÖØ½¨³öÎïÌåµÄÈýÎ¬Ä£ÐÍ¡£
 \begin{figure}[ht]
   \centering
   % Requires \usepackage{graphicx}
@@ -204,29 +204,29 @@ Experiments show that our single-camera dynamic human body reconstruction system
   \label{fig:Kinect}
 \end{figure}
 Kinect~ÉÏÓÐºìÍâ·¢ÉäÆ÷¡¢ºìÍâ½ÓÊÕÆ÷¡¢RGB~Ïà»úÈý¸öÖ÷Òª´«¸ÐÆ÷£¬ºìÍâ·¢ÉäÆ÷ÅäºÏºìÍâ½ÓÊÕÆ÷¿ÉÒÔ»ñµÃ³¡¾°µÄÉî¶ÈÐÅÏ¢£¬¶ø~RGB~Ïà»úÖ÷ÒªÊÇ»ñÈ¡³¡¾°µÄÑÕÉ«ÐÅÏ¢¡£
-Kinect~¿ÉÒÔÌá¹©×î´óÖ¡ÂÊ~30fps~µÄÉî¶ÈÍ¼ºÍ²ÊÉ«Í¼£¬Ëü¶Ô»·¾³µÄÊÊÓ¦ÄÜÁ¦Ç¿¡¢¾«¶È½Ï¸ß¡¢¼Û¸ñµÍÁ®£¬ÐÔ¼Û±ÈºÜ¸ß¡£
-Kinect~2´úÔÚÒ»´úµÄ»ù´¡ÉÏ½«²ÊÉ«Í¼Æ¬µÄ·Ö±æÂÊÌá¸ßµ½ÁË~$1920 \times 1080$~£¬²¢Ìá¸ßÁËÉî¶ÈÐÅÏ¢µÄ¾«¶È¡£
+Kinect~¿ÉÒÔÌá¹©×î´óÖ¡ÂÊ~30~fps~µÄÉî¶ÈÍ¼ºÍ²ÊÉ«Í¼£¬Ëü¶Ô»·¾³µÄÊÊÓ¦ÄÜÁ¦Ç¿¡¢¾«¶È½Ï¸ß¡¢¼Û¸ñµÍÁ®£¬ÐÔ¼Û±ÈºÜ¸ß¡£
+Kinect~¶þ´úÔÚÒ»´úµÄ»ù´¡ÉÏ½«²ÊÉ«Í¼Æ¬µÄ·Ö±æÂÊÌá¸ßµ½ÁË~$1920 \times 1080$~£¬²¢Ìá¸ßÁËÉî¶ÈÐÅÏ¢µÄ¾«¶È¡£
 
 Newcombe~µÈÈË~\cite{newcombe2011kinectfusion}~£¬Izadi~µÈÈË\cite{Izadi2011KinectFusion}~ÊµÏÖÁËÒ»¸öÃûÎª~KinectFusion~µÄÏµÍ³¡£
-KinectFusionÖ÷ÒªÓÉËÄ¸ö²¿·Ö×é³É£¨\ref{fig:KinectFusion}£©£º£¨a£©¡¢Ô¤´¦Àí½×¶Î¡£½«´Ó~Kinect~»ñÈ¡µ½µÄÉî¶ÈÍ¼×ª»»³ÉµãÔÆ£¬²¢¼ÆËã³öÃ¿¸öµãµÄ·¨Ïß£»£¨b£©¡¢ÈýÎ¬³¡¾°±íÃæ¸üÐÂ¡£Í¨¹ý¸ú×ÙÐÂµÄÉî¶ÈÍ¼»ñÈ¡µ½µÄ~Kinect~×ËÌ¬ÐÅÏ¢½«µ±Ç°Ö¡µÄµãÔÆÈÚºÏµ½ÓÃ½Ø¶ÏÓÐÏò¾àÀëº¯Êý£¨TSDF,Truncated Signed Distance Function£©±íÊ¾µÄ³¡¾°ÖÐÈ¥£»£¨c£©¡¢±íÃæÔ¤²â¡£Í¨¹ý¹âÏßÍ¶Éäµ½Õû¸ö³¡¾°µÄ~TSDF~ÉÏ£¬Ô¤²â³ö³¡¾°µÄ±íÃæ½á¹¹£¬½ø¶ø½«µ±Ç°Ö¡µÄµãÔÆÈÚºÏµ½Õû¸ö³¡¾°ÖÐÈ¥£¬´Ó¶øÊµÏÖ~Kinect~×ËÌ¬¸ú×ÙºÍ³¡¾°±íÃæ¸üÐÂµÄ±Õ»·£»£¨d£©¡¢Kinect~×ËÌ¬¹À¼Æ¡£Í¨¹ý¶à³ß¶ÈµÄµü´ú×î½üÁÚËã·¨½«Ô¤²â³öÀ´µÄ³¡¾°±íÃæ¸ú~Kinect~µÃµ½µÄ³¡¾°½á¹¹½øÐÐÅä×¼´Ó¶ø¼ÆËã³ö~Kinect~µÄ×ËÌ¬ÐÅÏ¢¡£
+KinectFusionÖ÷ÒªÓÉËÄ¸ö²¿·Ö×é³É£¨ÈçÍ¼~\ref{fig:KinectFusion}£©£º£¨a£©¡¢Ô¤´¦Àí½×¶Î¡£½«´Ó~Kinect~»ñÈ¡µ½µÄÉî¶ÈÍ¼×ª»»³ÉµãÔÆ£¬²¢¼ÆËã³öÃ¿¸öµãµÄ·¨Ïß£»£¨b£©¡¢ÈýÎ¬³¡¾°±íÃæ¸üÐÂ¡£Í¨¹ý¸ú×ÙÐÂµÄÉî¶ÈÍ¼»ñÈ¡~Kinect~×ËÌ¬ÐÅÏ¢²¢½«µ±Ç°Ö¡µÄµãÔÆÈÚºÏµ½ÓÃ½Ø¶ÏÓÐÏò¾àÀëº¯Êý£¨TSDF, Truncated Signed Distance Function£©±íÊ¾µÄ³¡¾°ÖÐÈ¥£»£¨c£©¡¢±íÃæÔ¤²â¡£Í¨¹ý¹âÏßÍ¶Éäµ½Õû¸ö³¡¾°µÄ~TSDF~ÉÏ£¬Ô¤²â³ö³¡¾°µÄ±íÃæ½á¹¹£¬½ø¶ø½«µ±Ç°Ö¡µÄµãÔÆÈÚºÏµ½Õû¸ö³¡¾°ÖÐÈ¥£¬´Ó¶øÊµÏÖ~Kinect~×ËÌ¬¸ú×ÙºÍ³¡¾°±íÃæ¸üÐÂµÄ±Õ»·£»£¨d£©¡¢Kinect~×ËÌ¬¹À¼Æ¡£Í¨¹ý¶à³ß¶ÈµÄµü´ú×î½üÁÚËã·¨½«Ô¤²â³öÀ´µÄ³¡¾°±íÃæ¸ú~Kinect~µÃµ½µÄ³¡¾°½á¹¹½øÐÐÅä×¼´Ó¶ø¼ÆËã³ö~Kinect~µÄ×ËÌ¬ÐÅÏ¢¡£
 \begin{figure}[ht]
   \centering
   % Requires \usepackage{graphicx}
   \includegraphics[width=\textwidth]{figures/KF_pipeline.eps}
-  \caption{KinectFusionÏµÍ³Á÷³Ì¡£}
+  \caption{~KinectFusion~ÏµÍ³Á÷³Ì¡£}
   \label{fig:KinectFusion}
 \end{figure}
 Í¨¹ý~GPU~¼ÓËÙ~KinectFusion~¿ÉÒÔÊµÊ±ÖØ½¨³ö³¡¾°±È½Ï¾«Ï¸µÄÈýÎ¬Ä£ÐÍ£¬µ«ÊÇËüÖ»ÊÊÓÃÓÚÖØ½¨¾²Ì¬³¡¾°µÄÈýÎ¬Ä£ÐÍ¡£
 
 Ê¹ÓÃ~KinectFusion~ÖØ½¨ÈËÌåÄ£ÐÍÊÇ±È½ÏÀ§ÄÑµÄ£¬ÒòÎª~KinectFusion~Ö»ÄÜÖØ½¨¾²Ì¬³¡¾°µÄÈýÎ¬Ä£ÐÍ£¬¶øÔÚÈËÌåÉ¨ÃèµÄ¹ý³ÌÖÐÈËºÜÄÑ±£³Ö¾ø¶ÔµÄ¾²Ö¹£¬Õâ¾Í¸øÈËÌåÄ£ÐÍÖØ½¨´øÀ´ÁËºÜ´óµÄÌôÕ½¡£
-»ùÓÚ~Kinect~µÄÈýÎ¬ÈËÌåÖØ½¨»ò¶à¶¼½è¼øÁË~KinectFusion~µÄË¼Â·£¬ËûÃÇ´ó¶àÀûÓÃÄ³Ê±¿ÌÈËÌå¾Ö²¿µÄÈýÎ¬Ä£ÐÍÀ´»Ö¸´ÈËÌåÍêÕûµÄÈýÎ¬Ä£ÐÍ¡£
-µ«ÊÇ´Ó¾Ö²¿»Ö¸´ÕûÌåµÄÎÊÌâ±¾Éí¾ÍÊÇÒ»¸öÇ·Ô¼ÊøµÄÎÊÌâ£¬ËùÒÔÎªÁË½â¾öÕâÑùÒ»¸öÇ·Ô¼ÊøµÄÎÊÌâ£¬Ä¿Ç°µÄ½â¾ö·½·¨Ö÷ÒªÓÐ»ùÈËÌåÓÚÄ£°åµÄ·½·¨£¬Èç~\cite{weiss2011home,tong2012scanning,li20133d,zhang2014quality}¡£
+»ùÓÚ~Kinect~µÄÈýÎ¬ÈËÌåÖØ½¨»ò¶à»òÉÙ¶¼½è¼øÁË~KinectFusion~£¬ËûÃÇ´ó¶àÀûÓÃÄ³Ê±¿ÌÈËÌå¾Ö²¿µÄÈýÎ¬Ä£ÐÍÀ´»Ö¸´ÈËÌåÍêÕûµÄÈýÎ¬Ä£ÐÍ¡£
+µ«ÊÇ´Ó¾Ö²¿»Ö¸´ÕûÌåµÄÎÊÌâ±¾Éí¾ÍÊÇÒ»¸öÇ·Ô¼ÊøµÄÎÊÌâ£¬ËùÒÔÎªÁË½â¾öÕâÑùÒ»¸öÇ·Ô¼ÊøµÄÎÊÌâ£¬Ä¿Ç°µÄ½â¾ö·½·¨Ö÷ÒªÊÇ»ùÓÚÈËÌåÄ£°åµÄ·½·¨£¬Èç~\cite{weiss2011home,tong2012scanning,li20133d,zhang2014quality}¡£
 »¹ÓÐÒ»Ð©·½·¨ÊÇ²»ÐèÒªÈËÌåÄ£°å¾Í¿ÉÒÔÖØ½¨³öÈýÎ¬ÈËÌåÄ£ÐÍµÄ¡£
 ÀýÈç£¬½«ÈËÌåÄ£ÐÍ¿´×÷Äâ¸ÕÐÔÎïÌå£¨quasi-rigid object£©~\cite{zeng2013templateless}£¬½«·Ç¸ÕÐÔÎÊÌâÏò¸ÕÐÔÎÊÌâ×ª»»£»ÓÃ³íÃÜÌå±ä»»³¡£¨Dense Volumetric Warp-field£©±íÊ¾Ä£ÐÍÐÎ±ä~\cite{newcombe2015dynamicfusion}£»Ìá³öÐÂµÄ²ÎÊý»¯¶à·Ö±æÂÊÄ£ÐÍ~\cite{bogodetailed}£»ÀûÓÃ·Ç¸ÕÐÔ¹âÊøÆ½²î·¨¶ÔÈËÌåÄ£ÐÍ½øÐÐÈ«¾ÖÓÅ»¯~\cite{dou20153d}¡£
 »ùÓÚÄ£ÐÍµÄ·½·¨ÄÜ¹»ÊÊÓ¦ÈËÌå¸ü¶à¸´ÔÓµÄ×ËÊÆ£¬µ«ÊÇÔÚºÍÄ£ÐÍÈÚºÏµÄ¹ý³ÌÖÐ»á¶ªÊ§Éî¶ÈÐÅÏ¢ÖÐµÄ¸ßÆµ²¿·Ö£¬Ê¹µÃ×îÖÕµÃµ½µÄÄ£ÐÍ²»¹»¾«Ï¸¡£
 ¶øÆäËûµÄÖØ½¨·½·¨¿ÉÒÔ¾¡¿ÉÄÜ¶àµÄ±£ÁôÈËÌå±íÃæµÄÏ¸½Ú£¬µ«´øÀ´µÄÎÊÌâ¾ÍÊÇÔÚÄ³Ð©¼«¶Ë×ËÊÆµÄÇé¿öÏÂÏµÍ³¿ÉÄÜÎÞ·¨»ñµÃÈËÌåÄ£ÐÍ¡£
 
-Weiss~µÈÈË~\cite{weiss2011home}~ÀûÓÃ~Kinect~»ñÈ¡µ½µÄÉî¶ÈÐÅÏ¢½áºÏÈËÌåµÄÂÖÀª¡¢×ËÌ¬µÈÐÅÏ¢¼ÆËã³öÈËÌåµÄÌåÐÍ²ÎÊý£¬½Ó×ÅÓÃÈËÌåÌåÐÍ²ÎÊýÇý¶¯²ÎÊý»¯Ä£ÐÍ~SCAPE£¨Shape Completion and Animation for PEople£©~µÃµ½Ä¿±êÈËÌå²ÎÊý»¯µÄÈýÎ¬Ä£ÐÍ¡£
+Weiss~µÈÈË~\cite{weiss2011home}~ÏÈÓÃ~Kinect~»ñÈ¡µ½µÄÉî¶ÈÐÅÏ¢½áºÏÈËÌåµÄÂÖÀª¡¢×ËÌ¬µÈÐÅÏ¢¼ÆËã³öÈËÌåµÄÌåÐÍ²ÎÊý£¬½Ó×ÅÓÃÈËÌåÌåÐÍ²ÎÊýÇý¶¯²ÎÊý»¯Ä£ÐÍ~SCAPE£¨Shape Completion and Animation for PEople£©~µÃµ½Ä¿±êÈËÌå²ÎÊý»¯µÄÈýÎ¬Ä£ÐÍ¡£
 
 Tong~µÈÈË~\cite{tong2012scanning}~½«¶à¸öÊÓ½Ç²»ÖØµþµÄ~Kinect~°´Í¼~\ref{fig:DepthSensor_Tong}ÖÐÎ»ÖÃ·ÅÖÃ¡£
 ÔÚµÚÒ»Ö¡Ê±ÓÃ~Kinect~»ñÈ¡µÄÉî¶ÈÐÅÏ¢ÏÈÖØ½¨³öÒ»¸ö±È½Ï´Ö²ÚµÄÄ£°å£¬È»ºó½«Ä£°åºÍµ±Ç°Ö¡ÏÂÈËÌåÄ£ÐÍ½øÐÐÈÚºÏ¡£
@@ -240,10 +240,10 @@ Tong~µÈÈË~\cite{tong2012scanning}~½«¶à¸öÊÓ½Ç²»ÖØµþµÄ~Kinect~°´Í¼~\ref{fig:DepthS
   \label{fig:DepthSensor_Tong}
 \end{figure}
 
-Li~µÈÈË~\cite{li20133d}~ÓÃÒ»¸ö~Kinect~´Ó²»Í¬µÄ½Ç¶ÈÉ¨ÃèÒ»¸öÈË½üËÆ×ËÌ¬µÄÈýÎ¬Ä£ÐÍ£¬È»ºó½«²»Í¬½Ç¶ÈµÃµ½µÄÄ£ÐÍÈÚºÏµ½Ò»ÆðµÃµ½Ò»¸öÍêÕûµÄÈËÌåÄ£ÐÍ¡£
+Li~µÈÈË~\cite{li20133d}~ÓÃÒ»¸ö~Kinect~´Ó²»Í¬µÄ½Ç¶ÈÉ¨ÃèÒ»¸öÈËÏàËÆ×ËÌ¬µÄÈýÎ¬Ä£ÐÍ£¬È»ºó½«²»Í¬½Ç¶ÈµÃµ½µÄÄ£ÐÍÈÚºÏµ½Ò»ÆðµÃµ½Ò»¸öÍêÕûµÄÈËÌåÄ£ÐÍ¡£
 Ã¿´ÎÉ¨ÃèÊ±¶¼Òª½«~Kinect~»ñÈ¡µ½µÄ¶àÖ¡Éî¶ÈÐÅÏ¢½øÐÐÈÚºÏÀ´½µµÍÄ£ÐÍµÄÔëÉù£¬½Ó×Å½«ÈËºÍ±³¾°·Ö¸î¿ª£¬µÃµ½µ±Ç°½Ç¶ÈÏÂÈËÌåµÄÈýÎ¬Ä£ÐÍ¡£
-ÓÉÓÚÈËÔÚ~Kinect~Ç°ÃæÐý×ªÊ±×ËÊÆ²»¿ÉÄÜ±£³ÖÒ»Ñù£¬ËùÒÔ²»Í¬ÊÓ½ÇÏÂ»ñµÃµÄÄ£ÐÍ¿Ï¶¨°üº¬ÁËÐí¶àÐÎ±äºÍ²»Á¬Ðø¡£
-ËùÒÔËûÃÇ¾Í½«Ä³Ò»ÊÓ½ÇÏÂµÄÈËÌåÄ£ÐÍ×÷ÎªÄ£°å£¬²¢½«ÆäËûÊÓ½ÇÏÂµÄÈËÌåÄ£ÐÍÓÃ¸ÕÐÔ¡¢·Ç¸ÕÐÔÈÚºÏËã·¨½«Ä£ÐÍÈÚºÏµ½Ä£°åÖÐ£¬×îºóÀûÓÃÈÚºÏ¹ý³ÌÖÐµÃµ½µÄ¶ÔÓ¦¹ØÏµ×öÈ«¾ÖµÄÓÅ»¯µÃµ½ÍêÕûµÄÈËÌåÄ£ÐÍ¡£
+ÓÉÓÚÈËÔÚ~Kinect~Ç°Ãæ×ªÉíÊ±×ËÊÆ²»¿ÉÄÜ±£³ÖÒ»Ñù£¬ËùÒÔ²»Í¬ÊÓ½ÇÏÂ»ñµÃµÄÄ£ÐÍ¿Ï¶¨°üº¬ÁËÐí¶àÐÎ±äºÍ²»Á¬Ðø¡£
+Òò´ËËûÃÇ¾Í½«Ä³Ò»ÊÓ½ÇÏÂµÄÈËÌåÄ£ÐÍ×÷ÎªÄ£°å£¬²¢½«ÆäËûÊÓ½ÇÏÂµÄÈËÌåÄ£ÐÍÓÃ¸ÕÐÔ¡¢·Ç¸ÕÐÔÈÚºÏËã·¨½«Ä£ÐÍÈÚºÏµ½Ä£°åÖÐ£¬×îºóÀûÓÃÈÚºÏ¹ý³ÌÖÐµÃµ½µÄ¶ÔÓ¦¹ØÏµ×öÈ«¾ÖµÄÓÅ»¯µÃµ½ÍêÕûµÄÈËÌåÄ£ÐÍ¡£
 
 Zhang~µÈÈË~\cite{zhang2014quality}~ÀûÓÃ~KinectFusion~»ñÈ¡Í¬Ò»¸öÈËÔÚ²»Í¬×ËÊÆÏÂµÄÈýÎ¬Ä£ÐÍ£¬ÈçÍ¼~\ref{fig:DepthSensor_Zhang}~ÖÐ£¨a£©¡£
 È»ºó½«ÕâÐ©Ä£ÐÍ½áºÏÈËÌå×ËÌ¬ÐÅÏ¢ÑµÁ·³öÕâ¸öÈËµÄ²ÎÊý»¯ÈýÎ¬ÈËÌåÄ£ÐÍ£¬ÈçÍ¼~\ref{fig:DepthSensor_Zhang}~ÖÐ£¨b£©¡£
@@ -258,7 +258,7 @@ Zhang~µÈÈË~\cite{zhang2014quality}~ÀûÓÃ~KinectFusion~»ñÈ¡Í¬Ò»¸öÈËÔÚ²»Í¬×ËÊÆÏÂµÄÈ
 
 Zeng~µÈÈË~\cite{zeng2013templateless}~°ÑÈËÌåÄ£ÐÍ¿´³ÉºÜ¶àÐ¡¸ÕÐÔ¿éµÄ×é³É£¬²¢ÇÒÄ£ÐÍµÄ·Ç¸ÕÐÔÐÎ±äÓÃ¡°Í¼¡±À´±íÊ¾ÕâÑù¾Í½µµÍÁËÎÊÌâµÄ¸´ÔÓ¶È¡£
 Ëã·¨¾ßÌå¹ý³ÌÈçÍ¼~\ref{fig:DepthSensor_Zeng}~ËùÊ¾£º
-£¨1£©¡¢Kinect»ñÈ¡µÄÃ¿Ö¡Éî¶ÈÐÅÏ¢¶¼ÓÃÄ£ÐÍµ½²¿·Ö£¨Model-to-part Method£©µÄ·½·¨½«¡°Í¼¡±ÈÚºÏµ½Éî¶ÈÐÅÏ¢ÉÏ¡£
+£¨1£©¡¢Kinect~»ñÈ¡µÄÃ¿Ö¡Éî¶ÈÐÅÏ¢¶¼ÓÃÄ£ÐÍµ½²¿·Ö£¨Model-to-part Method£©µÄ·½·¨½«¡°Í¼¡±ÈÚºÏµ½Éî¶ÈÐÅÏ¢ÉÏ¡£
 £¨2£©¡¢ÈÚºÏÖ®ºó£¬¶ÔÉî¶ÈÐÅÏ¢½øÐÐ²ÉÑù²¢½«ÆäÈÚºÏ½ø¡°Í¼¡±ÖÐÒÔ¸üÐÂ¡°Í¼¡±µÄÍØÆËÐÅÏ¢¡£
 £¨3£©¡¢ÈÚºÏ²»Í¬Ö¡ËùÓÐµÄÉî¶ÈÐÅÏ¢Ö®ºó¾Í×öÈ«¾ÖµÄ·Ç¸ÕÐÔ±ä»»£¬½«ËùÓÐµÄ¿Õ¼äµãÒÀ¾Ý¡°Í¼¡±±ä»»µ½×îºóÒ»Ö¡ÖÐ¡£
 £¨4£©¡¢×îºóÍ¨¹ý²´ËÉÖØ½¨µÃµ½ÍêÕûµÄÈËÌåÄ£ÐÍ¡£
@@ -271,12 +271,12 @@ Zeng~µÈÈË~\cite{zeng2013templateless}~°ÑÈËÌåÄ£ÐÍ¿´³ÉºÜ¶àÐ¡¸ÕÐÔ¿éµÄ×é³É£¬²¢ÇÒÄ£ÐÍ
 \end{figure}
 
 Newcombe~µÈÈË~\cite{newcombe2015dynamicfusion}~ÍØÕ¹ÁË~KinectFusion~µÄÓ¦ÓÃ³¡¾°£¬ËûÃÇÀûÓÃ³íÃÜÌå±ä»»³¡£¨Dense Volumetric Warp-field£©ºÍÕýÔò¿Õ¼ä£¨Canonical Space£©Ê¹µÃÀûÓÃ~Kinect~¿ÉÒÔÖØ½¨³ö¶¯Ì¬ÈËµÄÈýÎ¬Ä£ÐÍ¡£
-ËûÃÇµÄËã·¨µÄ¾ßÌå¹ý³ÌÈçÍ¼~\ref{fig:DepthSensor_DynamicFusion}ËùÊ¾¡£Í¼ÖÐ£¨a£©¡¢£¨b£©ÊÇËûÃÇ´Ó~Kinect~µÃµ½µÄÉî¶ÈÍ¼£¬£¨d£©¡¢£¨e£©ÊÇÖØ½¨³öÀ´µÄ³íÃÜÄ£ÐÍ¡£
+ËûÃÇµÄËã·¨µÄ¾ßÌå¹ý³ÌÈçÍ¼~\ref{fig:DepthSensor_DynamicFusion}~ËùÊ¾¡£Í¼ÖÐ£¨a£©¡¢£¨b£©ÊÇËûÃÇ´Ó~Kinect~µÃµ½µÄÉî¶ÈÍ¼£¬£¨d£©¡¢£¨e£©ÊÇÖØ½¨³öÀ´µÄ³íÃÜÄ£ÐÍ¡£
 ËûÃÇÍ¨¹ý±ä»»ÕýÔò¿Õ¼äµÄÄ£ÐÍµ½µ±Ç°Ö¡µÄÉî¶ÈÍ¼À´µÃµ½³íÃÜÌå±ä»»³¡µÄ²ÎÊý£¬½Ó×ÅÀûÓÃµÃµ½µÄ³íÃÜÌå±ä»»³¡½«µ±Ç°Éî¶ÈÍ¼ÈÚºÏµ½ÕýÔò¿Õ¼ä£¬Í¼£¨d£¬f£©¡£
 Óë´ËÍ¬Ê±£¬±ä»»³¡ÓÃÒ»ÏµÁÐ~6~¸ö×ÔÓÉ¶ÈµÄ±ä»»µãÀ´±íÊ¾
 %±ä»»³¡ÓÃÒ»ÏµÁÐÏµÊý~6D~±ä»»µãÀ´±íÊ¾£¬
 ²¢Í¨¹ý~K~½üÁÚ²îÖµµÃµ½Æ½»¬µÄÕýÔò¿Õ¼äÖ¡£¬Í¼£¨c£©¡£
-×îÖÕ£¬ÀûÓÃ¸ÕµÃµ½µÄÕýÔò¿Õ¼äÖ¡¾Í¿ÉÒÔ²¹È«µ±Ç°Ö¡µÄÄ£ÐÍ£¬µÃµ½ÊµÊ±µÄ¶¯Ì¬µÄÈýÎ¬Ä£ÐÍ£¬Í¼£¨e£©¡£
+×îÖÕ£¬ÀûÓÃ¸ÕµÃµ½µÄÕýÔò¿Õ¼äÖ¡¾Í¿ÉÒÔ²¹È«µ±Ç°Ö¡µÄÄ£ÐÍ£¬µÃµ½ÊµÊ±¡¢¶¯Ì¬µÄÈýÎ¬Ä£ÐÍ£¬Í¼£¨e£©¡£
 \begin{figure}[ht]
   \centering
   % Requires \usepackage{graphicx}
@@ -285,13 +285,13 @@ Newcombe~µÈÈË~\cite{newcombe2015dynamicfusion}~ÍØÕ¹ÁË~KinectFusion~µÄÓ¦ÓÃ³¡¾°£¬Ë
   \label{fig:DepthSensor_DynamicFusion}
 \end{figure}
 
-BogoµÈÈË~\cite{bogodetailed}~À©Õ¹ÁË~SCAPE~Ä£ÐÍÌá³öÁËÒ»¸öÃûÎª¡°Delta¡±µÄ¶à·Ö±æÂÊÈËÌåÄ£ÐÍ¡£´Óµ¥Ä¿µÄRGB-DÍ¼ÏñÐòÁÐÖÐ»Ö¸´³ö¶¯Ì¬ÈËÌåµÄÌåÐÍ²ÎÊýÖ®ºó£¬½áºÏ¸ß·Ö±æÂÊÎ»ÒÆÍ¼»ñÈ¡ÈËÌå±íÃæµÄÏ¸½Ú£¬´Ó¶øµÃµ½¾«Ï¸µÄÈýÎ¬ÈËÌåÄ£ÐÍ¡£
+BogoµÈÈË~\cite{bogodetailed}~À©Õ¹ÁË~SCAPE~Ä£ÐÍÌá³öÁËÒ»¸öÃûÎª¡°Delta¡±µÄ¶à·Ö±æÂÊÈËÌåÄ£ÐÍ¡£´Óµ¥Ä¿µÄ~RGB-D~Í¼ÏñÐòÁÐÖÐ»Ö¸´³ö¶¯Ì¬ÈËÌåµÄÌåÐÍ²ÎÊýÖ®ºó£¬½áºÏ¸ß·Ö±æÂÊÎ»ÒÆÍ¼»ñÈ¡ÈËÌå±íÃæµÄÏ¸½Ú£¬´Ó¶øµÃµ½¾«Ï¸µÄÈýÎ¬ÈËÌåÄ£ÐÍ¡£
 DouµÈÈË~\cite{dou20153d}~Í¨¹ý·Ç¸ÕÐÔ¹âÊøÆ½²î·¨£¨Non-rigid Bundle Adjustment£©ÓÅ»¯×îÖÕÄ£ÐÍµÄÌåÐÍºÍÃ¿Ò»Ö¡Ä£ÐÍµÄ·Ç¸ÕÐÔ²ÎÊý£¬´Ó¶øÊ¹µÃÏµÍ³ÄÜ¹»»ñÈ¡°üº¬´óÁ¿·Ç¸ÕÐÔÔË¶¯µÄ¶¯Ì¬ÎïÌåµÄÈýÎ¬Ä£ÐÍ¡£
 
 \subsection{¶àÊÓ½ÇÈýÎ¬ÈËÌå½¨Ä£}
 \label{sec:multi_view_modeling}
 
-¶àÊÓ½ÇÈýÎ¬ÖØ½¨Ö÷ÒªÊÇÀûÓÃ¶à¸öÍ¬²½ÇÒ±ê¶¨¹ýµÄÏà»ú»ñÈ¡²»Í¬ÊÓ½ÇÏÂÍ¬Ò»Ê±¿ÌÄ¿±êµÄÐÅÏ¢À´µÃµ½Ä¿±êµÄÈýÎ¬Ä£ÐÍ¡£
+¶àÊÓ½ÇÈýÎ¬ÖØ½¨Ö÷ÒªÊÇÀûÓÃ¶à¸öÍ¬²½ÇÒ±ê¶¨¹ýµÄÏà»ú»ñÈ¡²»Í¬ÊÓ½ÇÏÂÍ¬Ò»Ê±¿ÌÄ¿±êµÄÐÅÏ¢À´ÖØ½¨³öÄ¿±êµÄÈýÎ¬Ä£ÐÍ¡£
 ¶àÊÓ½ÇÖØ½¨»·¾³£¨ÈçÍ¼~\ref{fig:multi_view_setup}£©´î½¨ÊÇ¼¸ÖÖÖØ½¨·½·¨ÖÐ×î·±ËöµÄ£¬²»½öÐèÒª¿¼ÂÇÏà»ú°Ú·ÅÎ»ÖÃÊÇ·ñºÏÀí£¬»¹ÐèÒª½«Ïà»ú½øÐÐÖ¡Í¬²½£¬×¼È·±ê¶¨¸÷¸öÏà»úµÄ¿Õ¼äÎ»ÖÃÐÅÏ¢¡£
 \begin{figure}[ht]
   \centering
@@ -306,16 +306,16 @@ DouµÈÈË~\cite{dou20153d}~Í¨¹ý·Ç¸ÕÐÔ¹âÊøÆ½²î·¨£¨Non-rigid Bundle Adjustment£©ÓÅ»¯
 ¾¡¹Ü¶àÏà»úÏµÍ³¿ÉÒÔ»ñÈ¡³¡¾°µÄÉî¶ÈÐÅÏ¢£¬µ«ÊÇÉî¶ÈÐÅÏ¢µÄÖÊÁ¿»¹ÊÇÎÞ·¨¸úÉî¶ÈÏà»úÏàÌá²¢ÂÛ£¬ËùÒÔÊ¹ÓÃ¶àÏà»ú½øÐÐÖØ½¨µÄÏµÍ³»ù±¾¶¼ÊÇ»ùÓÚÈËÌåÄ£°åÈÚºÏµÄ·½·¨¡£
 »ùÓÚÈËÌåÄ£°åÈÚºÏµÄ·½·¨Ò»°ã»áµ¼ÖÂÖØ½¨³öÀ´µÄÄ£ÐÍÈ±Ê§Ðí¶àµÄÏ¸½Ú£¬ËùÒÔ¶àÏà»úÖØ½¨ÏµÍ³µÄ¹¤×÷ÖØµã´ó¶àÊÇ¾¡¿ÉÄÜ»Ö¸´Ä£ÐÍ±íÃæ¸ü¶àµÄÏ¸½ÚÐÅÏ¢¡£
 Ò»°ãÇé¿öÏÂËûÃÇ»áÑ¡ÔñÓÃÉî¶ÈÏà»ú»òÕßÀ×´ïÉ¨Ãè³öÈËÌå¾«Ï¸µÄÈýÎ¬Ä£ÐÍ×÷ÎªÈËÌåÄ£°å£¬È»ºó½«Ä£ÐÍºÍÈËÌå¹Ç¼Ü½øÐÐ°ó¶¨ÈÚºÏµÃµ½¿ÉÒÔÓÃ¹Ç¼ÜÇý¶¯µÄÈýÎ¬Ä£ÐÍ£¬×îºóÀûÓÃÈËÌå²»Í¬ÊÓ½ÇÏÂµÄÂÖÀª¡¢ÌåÐÍÐÅÏ¢¶ÔÃ¿Ö¡µÄÈËÌåÄ£ÐÍ½øÐÐÓÅ»¯µÃµ½½ÏÎª¾«Ï¸µÄÄ£ÐÍ~\cite{gall2009motion,liu2013markerless,huang2014human,robertini2014efficient}¡£
-¶ø~Theobalt~µÈÈË~\cite{deaguiar2008performance,Theobalt2010Performance}~Å×ÆúÁË´«Í³ÓÃ¹Ç÷ÀÇý¶¯»ò½«ÔË¶¯²ÎÊý»¯µÄ·½·¨£¬¶øÊÇÓÃ²¶×½µ½µÄÄ£ÐÍ±ä»¯À´Çý¶¯ÈËÌåÄ£ÐÍ¡£
-½«À×´ïÉ¨Ãè³öÈËÌå¾«Ï¸Ä£ÐÍ×ª»¯³ÉÒ»¸ö´Ö²ÚÄ£ÐÍ£¬¶ÔÓÚ»ñÈ¡µÄÃ¿Ò»Ö¡Í¼ÏñËûÃÇÏÈÓÃ´Ö²ÚÄ£ÐÍ»ñµÃÈËµÄ×ËÌ¬ÐÅÏ¢£¬È»ºóÓÃ¾«Ï¸Ä£ÐÍ½áºÏÈËÌåÂÖÀª¡¢¶àÊÓ½ÇÐÅÏ¢µÃµ½ÈËÌåÄ£ÐÍ±íÃæµÄÏ¸½ÚÐÅÏ¢¡£
+Theobalt~µÈÈË~\cite{deaguiar2008performance,Theobalt2010Performance}~Å×ÆúÁË´«Í³ÓÃ¹Ç÷ÀÇý¶¯»ò½«ÔË¶¯²ÎÊý»¯µÄ·½·¨£¬¶øÊÇÓÃ²¶×½µ½µÄÄ£ÐÍ±ä»¯À´Çý¶¯ÈËÌåÄ£ÐÍ¡£
+ËûÃÇ½«À×´ïÉ¨Ãè³öÈËÌå¾«Ï¸Ä£ÐÍ×ª»¯³ÉÒ»¸ö´Ö²ÚÄ£ÐÍ£¬¶ÔÓÚ»ñÈ¡µÄÃ¿Ò»Ö¡Í¼ÏñËûÃÇÏÈÓÃ´Ö²ÚÄ£ÐÍ»ñµÃÈËµÄ×ËÌ¬ÐÅÏ¢£¬È»ºóÓÃ¾«Ï¸Ä£ÐÍ½áºÏÈËÌåÂÖÀª¡¢¶àÊÓ½ÇÐÅÏ¢µÃµ½ÈËÌåÄ£ÐÍ±íÃæµÄÏ¸½ÚÐÅÏ¢¡£
 Huang~µÈÈË~\cite{huang2014human}~½è¼øÁË¡°¹Ø¼üÖ¡¡±µÄË¼Ïë²¢½«ÆäÓ¦ÓÃµ½¶àÏà»úÖØ½¨ÖÐÌá¸ßÁËÏµÍ³µÄÂ³°ôÐÔ¡£
-ZollhoferµÈÈË~\cite{zollhofer2014real}~ÀûÓÃË«Ä¿Ïà»úÄ£ÄâÉî¶ÈÏà»ú¹¤×÷»ñÈ¡³¡¾°µÄÉî¶ÈÐÅÏ¢£¬½áºÏÌåÈÚºÏ·½·¨ºÍ·Ç¸ÕÐÔÈýÎ¬ÖØ½¨Ëã·¨ÖØÊµÊ±µØÖØ½¨³öÈËÌåµÄÈýÎ¬Ä£ÐÍ¡£
+Zollhofer~µÈÈË~\cite{zollhofer2014real}~ÀûÓÃË«Ä¿Ïà»úÄ£ÄâÉî¶ÈÏà»ú¹¤×÷»ñÈ¡³¡¾°µÄÉî¶ÈÐÅÏ¢£¬½áºÏÌåÈÚºÏ·½·¨ºÍ·Ç¸ÕÐÔÈýÎ¬ÖØ½¨Ëã·¨ÖØÊµÊ±µØÖØ½¨³öÈËÌåµÄÈýÎ¬Ä£ÐÍ¡£
 
-GallµÈÈË~\cite{gall2009motion}~µÄ·½·¨ÈçÍ¼~\ref{fig:multi_view_Gall}~£¬ËûÃÇÍ¬ÑùÓÃÀ×´ïÏÈÉ¨Ãè³öÈËÌå¾«Ï¸µÄÈýÎ¬Ä£ÐÍ£¬²¢½«Ä£ÐÍºÍÈËÌå¹Ç÷À×öÈÚºÏÊ¹µÃÄ£ÐÍÄÜ¹»ÓÃÈËÌå¹Ç¼Ü½øÐÐÇý¶¯£¬Í¼£¨a£©¡£
-ÀûÓÃ·Ç¼à¶½µÄ·½·¨½áºÏÈËÌåÂÖÀª¸ú×ÙÈËÌå¹Ç÷À£¬Í¼£¨b,c£©¡£
-½«Ç°Ò»Ö¡µÄÈËÌåÄ£ÐÍ½øÐÐ±äÐÎ£¬ÔÚÄâºÏÍ¼ÏñÉÏµÄÈËÌåµÄÍ¬Ê±ÓÅ»¯»¯Í¼£¨c£©ÖÐµÄÈËÌå¹Ç¼Ü¡£
+Gall~µÈÈË~\cite{gall2009motion}~µÄ·½·¨ÈçÍ¼~\ref{fig:multi_view_Gall}~£¬ËûÃÇÍ¬ÑùÓÃÀ×´ïÏÈÉ¨Ãè³öÈËÌå¾«Ï¸µÄÈýÎ¬Ä£ÐÍ£¬²¢½«Ä£ÐÍºÍÈËÌå¹Ç÷À×öÈÚºÏÊ¹µÃÄ£ÐÍÄÜ¹»ÓÃÈËÌå¹Ç¼Ü½øÐÐÇý¶¯£¬Í¼£¨a£©¡£
+ÀûÓÃ·Ç¼à¶½µÄ·½·¨½áºÏÈËÌåÂÖÀªÀ´¸ú×ÙÈËÌå¹Ç÷À£¬Í¼£¨b£¬c£©¡£
+½«Ç°Ò»Ö¡µÄÈËÌåÄ£ÐÍ½øÐÐ±äÐÎ£¬ÔÚÄâºÏÍ¼ÏñÉÏÈËÌåµÄÍ¬Ê±ÓÅ»¯»¯Í¼£¨c£©ÖÐµÄÈËÌå¹Ç¼Ü¡£
 ÓÉÓÚ¹Ç÷ÀµÄÇý¶¯ÎÞ·¨½â¾öÈËÌåÒÂ·þ±íÃæµÄÐÎ±äËùÒÔ»¹ÐèÒª½«Í¼£¨d£©ÖÐµÄÄ£ÐÍ¸ú²»Í¬ÊÓ½ÇÏÂµÄÈËÌåÂÖÀª½øÐÐÈÚºÏ£¬Í¼£¨e£©¡£
-×îºóµÃµ½Êµ¼ÊµÄÈËÌåÄ£ÐÍÍ¼£¨f£©
+×îºóµÃµ½Êµ¼ÊµÄÈËÌåÄ£ÐÍÍ¼£¨f£©¡£
 \begin{figure}[H]
   \centering
   % Requires \usepackage{graphicx}
@@ -328,7 +328,7 @@ Liu~µÈÈË~\cite{liu2013markerless}~µÄ·½·¨ÈçÍ¼~\ref{fig:multi_view_Liu}~ËùÊ¾¡£
 ËûÃÇÖ÷ÒªµÄ¹¤×÷ÔÚÓÚ½«ÈËÌåÔË¶¯²¶×½×ª»¯Îª~2D~Í¼ÏñÉÏµÄ·Ö¸î¡¢~3D~×ËÌ¬ÌåÐÍ¹À¼ÆµÄÎÊÌâ£¬Ê¹µÃÏµÍ³¿ÉÒÔ»ñµÃ¶à¸öÈËµÄÈýÎ¬Ä£ÐÍ¡£
 ËûÃÇÒ²ÐèÒª½«ÈýÎ¬ÈËÌåÄ£ÐÍºÍÈËÌå¹Ç÷ÀÈÚºÏÖ®ºóµÄ²ÎÊýÄ£ÐÍ×÷Îª³õÊ¼×´Ì¬£¬Í¼£¨a£©¡£
 ½Ó×Å¶ÔÍ¼Ïñ£¨b£©ÉÏ¶à¸öÈËµÄÂÖÀª½øÐÐ·Ö¸î£¬µÃµ½²»Í¬ÈËµÄÈËÌåÂÖÀª£¬Í¼£¨d£©¡£
-×îºó½«µ±Ç°Ö¡µÄÈËÌåÂÖÀª½áºÏºÍÉÏÒ»Ö¡µÄÈËÌå×ËÌ¬¡¢ÌåÐÍ½áºÏµÃµ½µ±Ç°Ö¡µÄÈËÌå×ËÌ¬ºÍÌåÐÍ£¬Í¼£¨e£¬f£©¡£
+×îºó½«µ±Ç°Ö¡µÄÈËÌåÂÖÀª½áºÏºÍÉÏÒ»Ö¡µÄÈËÌå×ËÌ¬¡¢ÌåÐÍµÃµ½µ±Ç°Ö¡µÄÈËÌå×ËÌ¬ºÍÌåÐÍ£¬Í¼£¨e£¬f£©¡£
 \begin{figure}[H]
   \centering
   % Requires \usepackage{graphicx}
@@ -342,7 +342,7 @@ Huang~µÈÈË~\cite{huang2014human}~Ìá³öÁË¹Ø¼üÖ¡µÄ¸ÅÄîÒÔ¼°Ò»ÖÖÍâµãÅÅ³ý·½·¨¡£
 ¶ø~Huang~µÈÈË½«¹Ø¼üÖ¡´¦»ñÈ¡µ½µÄÈËÌåÄ£ÐÍ×÷Îª¡°²Î¿¼Ä£ÐÍ¡±£¬ÖØ½¨Ä£ÐÍÊ±½«ËùÓÐµÄ¡°²Î¿¼Ä£ÐÍ¡±¸úµ±Ç°µÄÈËÌåÂÖÀª¡¢×ËÌ¬µÈÐÅÏ¢½øÐÐÈÚºÏÒÔÕÒ³öÒ»¸ö×îÓÅ½â¡£
 Ëæ×Å¡°²Î¿¼Ä£ÐÍ¡±ÊýÁ¿µÄÔö¶à£¬ÏµÍ³ÔÚÓÐÕÚµ²µÄÇé¿öÏÂ¾Í¿ÉÒÔÍ¨¹ýÄ³Ð©¹Ø¼üÖ¡´¦µÄ¡°²Î¿¼Ä£ÐÍ¡±ÕÒ³öµ±Ç°Çé¿öµÄ×îÓÅÆ¥Åä£¬´Ó¶ø¹À¼Æ³öÈËÌåÕÚµ²²¿·ÖµÄÐÎ×´£¬Ìá¸ßÁËÏµÍ³µÄÂ³°ôÐÔ¡£
 
-Robertini~µÈÈË~\cite{robertini2014efficient}~ÔÚGallµÈÈË~\cite{gall2009motion}·½·¨µÄ»ù´¡ÉÏÌá³öÁËÓÃÈýÎ¬¸ßË¹º¯ÊýÀ´±íÊ¾ÈËÌåÌåÐÍµÄÐÂ·½·¨£¬²¢½«ÈýÎ¬ÈËÌåÖØ½¨ÎÊÌâ×ª»¯³ÉÁ¬ÐøÍ¼ÏñÐòÁÐÖÐÈËÌå±íÃæ¶¥µãÈ«¾ÖÓÅ»¯µÄÎÊÌâ£¬´Ó¶øÄÜ¹»»ñÈ¡Ä£ÐÍ±íÃæ¸ü¶àµÄÏ¸½ÚÊ¹µÃÄ£ÐÍ¸üÎª¾«Ï¸¡£
+Robertini~µÈÈË~\cite{robertini2014efficient}~ÔÚ~Gall~µÈÈË~\cite{gall2009motion}~·½·¨µÄ»ù´¡ÉÏÌá³öÁËÓÃÈýÎ¬¸ßË¹º¯ÊýÀ´±íÊ¾ÈËÌåÌåÐÍµÄÐÂ·½·¨£¬²¢½«ÈýÎ¬ÈËÌåÖØ½¨ÎÊÌâ×ª»¯³ÉÁ¬ÐøÍ¼ÏñÐòÁÐÖÐÈËÌå±íÃæ¶¥µãÈ«¾ÖÓÅ»¯µÄÎÊÌâ£¬´Ó¶øÄÜ¹»»ñÈ¡Ä£ÐÍ±íÃæ¸ü¶àµÄÏ¸½ÚÊ¹µÃÄ£ÐÍ¸üÎª¾«Ï¸¡£
 ÈçÍ¼~\ref{fig:multi_view_Robertini}~ËùÊ¾£¬ËûÃÇÓÃÈýÎ¬¸ßË¹º¯ÊýÀ´±íÊ¾ÓÐ×ÅÉ«µÄÈËÌåÄ£ÐÍ¡£
 Í¬Ê±½«µÃµ½µÄ¶àÊÓ½ÇÍ¼Ïñ»®·Ö³ÉºÜ¶àÐ¡¿é²¢ÓÃ¶þÎ¬¸ßË¹º¯Êý±íÊ¾¡£
 ×îºóÔÚ±£Ö¤×î´óÑÕÉ«Á¬ÐøÐÔµÄÇ°ÌáÏÂ½«¶þÎ¬¸ßË¹º¯ÊýºÍÈýÎ¬¸ßË¹º¯ÊýÒ»Æð×öÓÅ»¯µÃµ½Ä£ÐÍ¸ü¶àµÄÏ¸½Ú¡£
@@ -357,23 +357,23 @@ Robertini~µÈÈË~\cite{robertini2014efficient}~ÔÚGallµÈÈË~\cite{gall2009motion}·½·
 \subsection{µ¥ÊÓ½ÇÈýÎ¬ÈËÌå½¨Ä£}
 \label{sec:single_view_modeling}
 
-ËäÈ»Éî¶ÈÏà»úÖØ½¨³öÀ´µÄÄ£ÐÍ¾«¶È½Ï¸ß£¬²¢ÇÒÒÑ¾­ÄÜ¹»Ó¦ÓÃÔÚ¶¯Ì¬µÄ³¡¾°£¬µ«ÊÇ£¬Éî¶ÈÏà»úÌå»ý½Ï´ó±ãÐ¯ÐÔºÜ²î£¬¸ßÖÊÁ¿Éî¶ÈÏà»ú¼Û¸ñ¸ß°ºµÈÒòËØÏÞÖÆÁËÉî¶ÈÏà»úÖØ½¨·½°¸µÄÆÕ¼°¡£
+ËäÈ»Éî¶ÈÏà»úÖØ½¨³öÀ´µÄÄ£ÐÍ¾«¶È½Ï¸ß£¬²¢ÇÒÒÑ¾­ÄÜ¹»Ó¦ÓÃµ½¶¯Ì¬µÄ³¡¾°ÖÐ£¬µ«ÊÇ£¬Éî¶ÈÏà»úÌå»ý½Ï´ó±ãÐ¯ÐÔºÜ²î£¬¸ßÖÊÁ¿Éî¶ÈÏà»ú¼Û¸ñ¸ß°ºµÈÒòËØÏÞÖÆÁËÉî¶ÈÏà»úÖØ½¨·½°¸µÄÆÕ¼°¡£
 ¶àÏà»úÈýÎ¬ÖØ½¨²»½öÐèÒª¶Ô¶à¸öÏà»úµÄÍ¼Ïñ½øÐÐÖ¡Í¬²½£¬»¹Òª¶ÔÏà»úµÄÎ»ÖÃ½øÐÐ±ê¶¨¡£
-ÇÒ¶à¸öÏà»úÊ¹ÓÃ²»µ«ÖØ½¨ÏµÍ³µÄ³É±¾Ã»ÓÐ½µµÍ£¬»¹Ê¹µÃÉè±¸»·¾³´î½¨±È½Ï·±Ëö¡£
-ÉÏÃæµÄÖÖÖÖÒòËØ¶¼ÖÆÔ¼ÁËÉî¶ÈÏà»úºÍ¶àÏà»ú½øÐÐÈýÎ¬ÖØ½¨µÄÓ¦ÓÃ³¡¾°¡£
-Ïà±ÈÖ®ÏÂ£¬µ¥Ïà»úÈýÎ¬ÖØ½¨¾ß±¸Éè±¸³É±¾½ÏµÍ£¬ÏµÍ³´î½¨¼òµ¥µÄÓÅÊÆ£¬²¢ÇÒËæ×Å¼¼ÊõµÄ·¢Õ¹£¬ÊÖ»úµÈÒÆ¶¯Éè±¸Ê¹µÃÓÃ»§¿ÉÒÔ¼òµ¥¿ìËÙµÄ»ñÈ¡¸ßÖÊÁ¿µÄÓ°Ïñ×ÊÁÏ¡£
+Òò´Ë¶àÏà»úÖØ½¨ÏµÍ³²»µ«³É±¾Ã»ÓÐ½µµÍ£¬¶øÇÒÉè±¸»·¾³´î½¨±È½Ï·±Ëö¡£
+ÉÏÃæµÄÖÖÖÖÒòËØ¶¼ÏÞÖÆÁËÉî¶ÈÏà»úºÍ¶àÏà»úÖØ½¨ÏµÍ³µÄÓ¦ÓÃ³¡¾°¡£
+Ïà±ÈÖ®ÏÂ£¬µ¥Ïà»úÈýÎ¬ÖØ½¨¾ß±¸Éè±¸³É±¾½ÏµÍ£¬ÏµÍ³´î½¨¼òµ¥µÄÓÅÊÆ£¬²¢ÇÒËæ×Å¼¼ÊõµÄ·¢Õ¹£¬Ê¹ÓÃÊÖ»úµÈÒÆ¶¯Éè±¸¾Í¿ÉÒÔ¼òµ¥¿ìËÙµÄ»ñÈ¡¸ßÖÊÁ¿µÄÓ°Ïñ×ÊÁÏ¡£
 Òò´Ë£¬µ¥Ïà»úÈýÎ¬ÖØ½¨ÓÐ×Å¾Þ´óµÄ·¢Õ¹Ç±Á¦ºÍ¹ãÀ«µÄÓ¦ÓÃ³¡¾°¡£
 
 µ¥ÊÓ½ÇÖØ½¨Ïà±È¶àÊÓ½ÇÖØ½¨¶øÑÔËü¿ÉÒÔ»ñÈ¡µ½µÄÐÅÏ¢¾Í¸üÉÙ£¬ËùÒÔ´ó¶àÖØ½¨·½·¨¶¼ÊÇÏÈ½¨Á¢²ÎÊý»¯ÈËÌåÄ£ÐÍ£¬È»ºóÔÚ²ÎÊý»¯ÈËÌåÄ£ÐÍµÄ»ù´¡ÉÏÀûÓÃÈËÌåµÄÂÖÀªÐÅÏ¢×÷ÎªÔ¼ÊøÇó½âÖØ½¨ÎÊÌâ~\cite{guan2009estimating,hasler2010multilinear,jain2010moviereshape,zhou2010parametric}¡£
-µ«ÊÇ~Yu~µÈÈË~\cite{yu2015direct}~ËäÈ»Ã»ÓÐÓÃ²ÎÊý»¯µÄÄ£ÐÍ×öÖØ½¨µ«ÊÇËûÃÇÒ²ÐèÒªÏÈÓÃ~SFM£¨Structure From Motion£©~µÄ·½·¨µÃµ½Ä¿±ê³õÊ¼µÄÈýÎ¬Ä£ÐÍ¡£
+¾¡¹Ü~Yu~µÈÈË~\cite{yu2015direct}~Ã»ÓÐÓÃ²ÎÊý»¯µÄÄ£ÐÍ×öÖØ½¨£¬µ«ÊÇËûÃÇÒ²ÐèÒªÏÈÓÃ~SFM£¨Structure From Motion£©~µÄ·½·¨µÃµ½Ä¿±ê³õÊ¼µÄÈýÎ¬Ä£ÐÍ¡£
 ´ËÍâ£¬Guan~µÈÈË~\cite{guan2009estimating}~»¹Ê¹ÓÃ´ÓÒõÓ°µ½½á¹¹µÄ·½·¨Ìá¸ßÖØ½¨Ä£ÐÍµÄÖÊÁ¿£¬Ïû³ýÈËÌåÕÚµ²´øÀ´µÄÓ°Ïì¡£
-µ«ÊÇ£¬ÕâÒ²ÊÇµÄ·½·¨ÊÜÏÞÓÚ¹âÔ´µÄ·½ÏòºÍÇ¿¶È£¬²¢ÇÒÔÚ¶à¸ö¹âÔ´µÄÇé¿öÏÂ»áÊ¹µÃÖØ½¨ÎÊÌâ±äµÃÊ®·Ö¸´ÔÓ¡£
-×ÜµÄÀ´Ëµ£¬µ¥ÊÓ½ÇÓÉÓÚÍ¶Ó°±ä»»ËðÊ§µÄÐÅÏ¢¹ý¶à£¬ÇÒÏÖÊµÖÐ²»¿É±ÜÃâµÄÕÚµ²ÎÊÌâ£¬ÉÏÊö·½·¨»ò¶à»òÉÙ¶¼ÐèÒªÈËÎªµÄÌí¼ÓÒ»Ð©Ô¼Êø¶øÎÞ·¨×öµ½×Ô¶¯»¯µ¥ÊÓ½ÇÈýÎ¬ÈËÌåÖØ½¨¡£
+µ«ÊÇ£¬ÕâÒ²Ê¹µÃ·½·¨ÊÜÏÞÓÚ¹âÔ´µÄ·½ÏòºÍÇ¿¶È£¬²¢ÇÒÔÚ¶à¸ö¹âÔ´µÄÇé¿öÏÂ»áÊ¹µÃÖØ½¨ÎÊÌâ±äµÃÊ®·Ö¸´ÔÓ¡£
+×ÜµÄÀ´Ëµ£¬ÒòÎªµ¥ÊÓ½ÇÖÐÍ¶Ó°±ä»»ËðÊ§µÄÐÅÏ¢¹ý¶à¡¢ÎïÌå´æÔÚÕÚµ²£¬ËùÒÔÉÏÊö·½·¨»ò¶à»òÉÙ¶¼ÐèÒªÈËÎªµÄÌí¼ÓÒ»Ð©Ô¼Êø¶øÎÞ·¨×öµ½×Ô¶¯»¯µ¥ÊÓ½ÇÈýÎ¬ÈËÌåÖØ½¨¡£
 
 GuanµÈÈË~\cite{guan2009estimating}~µÄ·½·¨ÈçÍ¼~\ref{fig:single_view_Guan}~ËùÊ¾¡£
-ËûÃÇÊ×ÏÈ¼ÆËã³öµ¥·ùÍ¼Æ¬ÉÏµÄÈËÌå×ËÌ¬¡¢¹âÔ´·½Ïò¡¢ÈËÌåÌåÐÍÒÔ¼°Ç°¾°ºÍ±³¾°µÄ·Ö¸î£¬²¢ÀûÓÃ¹«¿ªµÄÈËÌåÄ£ÐÍÊý¾Ý¼¯ÑµÁ·³ö~SCAPE~Ä£ÐÍ£¬¡£
-½Ó×ÅÀûÓÃÈËÌåµÄÂÖÀª¡¢±ßÔµºÍÒõÓ°ÐÅÏ¢£¬½«Ò»¸ö¾²Ì¬ÈËÌåÄ£ÐÍÄâºÏµ½Í¼ÏñÉÏµÃµ½ÈËÌåµÄÌåÐÍÐÅÏ¢£¬×îºóµÃµ½µÄÈýÎ¬Ä£ÐÍ¿ÉÒÔ¶¯»­µÈÁìÓò¡£
-ÓÉÓÚËûÃÇ³ä·ÖÀûÓÃÁËÍ¼ÏñÖÐµÄÒõÓ°¡¢±ßÔµÐÅÏ¢£¬ËùÒÔËûÃÇµÄ·½·¨¿ÉÒÔÓ¦¶ÔÈËÌåÓÐÕÚµ²µÄÇé¿ö¡£
+ËûÃÇÊ×ÏÈ¼ÆËã³öµ¥·ùÍ¼ÏñÉÏµÄÈËÌå×ËÌ¬¡¢¹âÔ´·½Ïò¡¢ÈËÌåÌåÐÍÒÔ¼°Ç°¾°ºÍ±³¾°µÄ·Ö¸î£¬ÀûÓÃ¹«¿ªµÄÈËÌåÄ£ÐÍÊý¾Ý¼¯ÑµÁ·³ö~SCAPE~Ä£ÐÍ£¬¡£
+½Ó×ÅÀûÓÃÈËÌåµÄÂÖÀª¡¢±ßÔµºÍÒõÓ°ÐÅÏ¢£¬½«Ò»¸ö¾²Ì¬ÈËÌåÄ£ÐÍÄâºÏµ½Í¼ÏñÉÏµÃµ½ÈËÌåµÄÌåÐÍÐÅÏ¢¡£
+ÓÉÓÚËûÃÇ³ä·ÖÀûÓÃÁËÍ¼ÏñÖÐµÄÒõÓ°¡¢±ßÔµÐÅÏ¢£¬ËùÒÔËûÃÇµÄ·½·¨¿ÉÒÔ´¦ÀíÈËÌåÓÐÕÚµ²µÄÇé¿ö¡£
 ¾¡¹ÜÈç´Ë£¬ËûÃÇµÄ·½·¨ÔÚÈËÌå×ËÌ¬¹À¼ÆÊ±ÐèÒªÊÖ¶¯ÔÚÍ¼ÏñÉÏ±ê×¢³öÈËÌå¹Ø½Úµã×÷Îª³õÖµ¡£
 \begin{figure}[H]
   \centering
@@ -385,9 +385,9 @@ GuanµÈÈË~\cite{guan2009estimating}~µÄ·½·¨ÈçÍ¼~\ref{fig:single_view_Guan}~ËùÊ¾¡£
 
 HaslerµÈÈË~\cite{hasler2010multilinear}~Ã»ÓÐÊ¹ÓÃ±È½ÏÁ÷ÐÐµÄ~SCAPE~Ä£ÐÍ¶øÊÇÀûÓÃÊý¾Ý¼¯ÑµÁ·³öÒ»ÖÖË«ÏßÐÔ¾²Ì¬Ä£ÐÍ£¬ÈçÍ¼~\ref{fig:single_view_Hasler}£¨a£©¡£
 ÕâÖÖÄ£ÐÍµÄ²ÎÊý¼¯¿ÉÒÔÏßÐÔµØ½âÊÍ³ÉÈËÌåµÄ×ËÌ¬ºÍÌåÐÍ£¬²¢ÇÒÄ£ÐÍµÄÇý¶¯²»ÊÇÒÀ¿¿ÈËÌåµÄ×ËÌ¬ÐÅÏ¢¡£
-ÔÚÊ¹ÓÃÀ­ÆÕÀ­Ë¹±ä»»½«Ë«ÏßÐÔÄ£ÐÍµÄÌåÐÍ¸úÍ¼ÏñÉÏµÄÈËÌå½øÐÐÈÚºÏµÃµ½Í¼~\ref{fig:single_view_Hasler}£¨b£©¡£
+ËûÃÇÏÈÓÃÀ­ÆÕÀ­Ë¹±ä»»½«Ë«ÏßÐÔÄ£ÐÍµÄÌåÐÍ¸úÍ¼ÏñÉÏµÄÈËÌå½øÐÐÈÚºÏµÃµ½Í¼~\ref{fig:single_view_Hasler}£¨b£©¡£
 ½Ó×Å½«ÈËÌåµÄ×ËÌ¬»òÕßÌåÐÍ¸úÍ¼Ïñ½øÐÐÈÚºÏµÃµ½Í¼~\ref{fig:single_view_Hasler}£¨c£©¡£
-×îºóµü´ú½«ÈËÌå×ËÌ¬¡¢ÌåÐÍ¸úÍ¼ÏñÉÏÈËÌåÂÖÀª½øÐÐÈÚºÏ£¬Ê¹µÃÄ£ÐÍ¾¡¿ÉÄÜ¸úÍ¼ÏñÉÏÈËÌåÂÖÀªÈÚºÏ~\ref{fig:single_view_Hasler}£¨d£©£¬×îÖÕµÃµ½ÈËÌåÄ£ÐÍ~\ref{fig:single_view_Hasler}£¨e£©¡£
+×îºó½«ÈËÌå×ËÌ¬¡¢ÌåÐÍ¸úÍ¼ÏñÉÏÈËÌåÂÖÀª½øÐÐµü´úÈÚºÏ£¬Ê¹µÃÄ£ÐÍ¾¡¿ÉÄÜ¸úÍ¼ÏñÉÏÈËÌåÂÖÀªÈÚºÏ~\ref{fig:single_view_Hasler}£¨d£©£¬×îÖÕµÃµ½ÈËÌåÄ£ÐÍ~\ref{fig:single_view_Hasler}£¨e£©¡£
 ËäÈ»¶àÕÅÍ¼Æ¬¿ÉÒÔÌá¸ßËûÃÇÄ£ÐÍµÄ¾«¶È£¬µ«ÊÇËûÃÇÒ²ÐèÒªÊÖ¶¯±ê×¢Ò»Ð©ÌØÕ÷£¬²¢ÇÒÖØ½¨³öÀ´Ä£ÐÍµÄ±íÃæÒÀ¾ÉÓÐÐí¶àµÄÈ±ÏÝ¡£
 \begin{figure}[H]
   \centering
@@ -398,7 +398,7 @@ HaslerµÈÈË~\cite{hasler2010multilinear}~Ã»ÓÐÊ¹ÓÃ±È½ÏÁ÷ÐÐµÄ~SCAPE~Ä£ÐÍ¶øÊÇÀûÓÃÊý¾
 \end{figure}
 
 JainµÈÈË~\cite{jain2010moviereshape}~·½·¨µÄÌØµãÔÚÓÚµ±²ÎÊýÄ£ÐÍ¸úÍ¼ÏñÉÏµÄÈËÌåÈÚºÏÖ®ºóËûÃÇ¿ÉÒÔÍ¨¹ýÐÞ¸Ä²ÎÊýÄ£ÐÍµÄ²ÎÊý£¨Éí¸ß¡¢ÍÈ³¤¡¢¼¡ÈâÁ¿µÈ£©´Ó¶ø¸Ä±äÍ¼ÏñÉÏÈËÌåµÄÌåÐÍ£¬ÈçÍ¼~\ref{fig:single_view_Jain}¡£
-ËûÃÇ½«²ÎÊý»¯µÄÈýÎ¬Ä£ÐÍÍ¶Ó°µ½Í¼Æ¬ÖÐµÄÈËÌåÂÖÀªÉÏ£¬ÀûÓÃKLT£¨Kanade-Lucas-Tomasi£©Ëã·¨¸ú×ÙÍ¼ÏñÉÏÊÖ¶¯±ê¶¨µÄÌØÕ÷µã£¬Óë´ËÍ¬Ê±ÓÅ»¯³öÍ¼Æ¬ÖÐÈËÎïµÄÌåÐÍºÍ×ËÌ¬¡£
+ËûÃÇ½«²ÎÊý»¯µÄÈýÎ¬Ä£ÐÍÍ¶Ó°µ½Í¼Æ¬ÖÐµÄÈËÌåÂÖÀªÉÏ£¬ÀûÓÃ~KLT£¨Kanade-Lucas-Tomasi£©Ëã·¨¸ú×ÙÍ¼ÏñÉÏÊÖ¶¯±ê¶¨µÄÌØÕ÷µã£¬Óë´ËÍ¬Ê±ÓÅ»¯³öÍ¼Æ¬ÖÐÈËÎïµÄÌåÐÍºÍ×ËÌ¬¡£
 ËûÃÇµÄ²ÎÊýÄ£ÐÍÊÇÓÐ±ðÓÚ~SCAPE~Ä£ÐÍµÄ£¬ËûÃÇÃ»ÓÐÑµÁ·~SCAPE~ÖÐÃ¿¸öÈý½ÇÃæÆ¬Òò×ËÌ¬±ä»»¶øÒýÆðµÄ±ä»»¾ØÕó£¬¶øÊÇÖ±½Ó½«Ä£ÐÍºÍÈËÌå¹Ç¼Ü½øÐÐÈÚºÏ°ó¶¨£¬ÒòÎªÔÚ¶ÔÍ¼ÏñÉÏÈËÌå²ÎÊý½øÐÐÐÞ¸ÄÊ±ÊÇ²»ÐèÒªÕâÑùµÄÏ¸½ÚµÄ¡£
 \begin{figure}[H]
   \centering
@@ -410,9 +410,9 @@ JainµÈÈË~\cite{jain2010moviereshape}~·½·¨µÄÌØµãÔÚÓÚµ±²ÎÊýÄ£ÐÍ¸úÍ¼ÏñÉÏµÄÈËÌåÈÚºÏÖ
 
 ZhouµÈÈË~\cite{zhou2010parametric}~µÄ¹¤×÷¸úJainµÈÈË~\cite{jain2010moviereshape}~µÄ¹¤×÷ºÜÏàËÆ£¬µ«ÊÇËûÃÇÊ¹ÓÃµÄÊÇ~SCAPE~Ä£ÐÍ£¬²¢ÇÒÔÚ½«Ä£ÐÍºÍÍ¼ÏñÉÏÈËÌåÂÖÀªÈÚºÏÊ±Ê¹ÓÃ~fit-and-adjust~·½·¨¡£
 Í¼~\ref{fig:single_view_Zhou}~ËµÃ÷ÁËËûÃÇµÄÈÚºÏ·½·¨¡£
-ËûÃÇÊ×ÏÈÀûÓÃÓÃ»§ÊÖ¶¯±ê×¢µÄ¹Ø½Úµã¹À¼Æ³öÈýÎ¬ÈËÌå×ËÌ¬£¬Í¼~\ref{fig:single_view_Zhou}£¨a£©¡£
-½Ó×ÅÕÒ³öÄ£ÐÍÂÖÀªºÍÈËÌåÂÖÀªµÄ¶ÔÓ¦µã£¬Í¼~\ref{fig:single_view_Zhou}£¨b£©¡£
-ÀûÓÃÈËÌåÉÏ°ëÉíµÄ¶ÔÓ¦µãÏÈ¶ÔÈËÌåµÄÌåÐÍ¡¢×ËÌ¬½øÐÐ¹À¼Æ²¢µ÷ÕûÈËÌåÄ£ÐÍ£¬Í¼~\ref{fig:single_view_Zhou}£¨c£©¡£
+ËûÃÇÊ×ÏÈÀûÓÃÓÃ»§ÊÖ¶¯±ê×¢µÄ¹Ø½Úµã¹À¼Æ³öÈýÎ¬ÈËÌå×ËÌ¬£¬ÈçÍ¼~\ref{fig:single_view_Zhou}£¨a£©¡£
+½Ó×ÅÕÒ³öÄ£ÐÍÂÖÀªºÍÈËÌåÂÖÀªµÄ¶ÔÓ¦µã£¬ÈçÍ¼~\ref{fig:single_view_Zhou}£¨b£©¡£
+ÀûÓÃÈËÌåÉÏ°ëÉíµÄ¶ÔÓ¦µã¶ÔÈËÌåµÄÌåÐÍ¡¢×ËÌ¬½øÐÐ¹À¼Æ²¢µ÷ÕûÈËÌåÄ£ÐÍ£¬ÈçÍ¼~\ref{fig:single_view_Zhou}£¨c£©¡£
 ÔÙÀûÓÃµ÷ÕûÈËÌåÄ£ÐÍÖ®ºóÐÂµÄ¶ÔÓ¦µã£¨Í¼~\ref{fig:single_view_Zhou}£¨c£©ÈËÌåÏÂ°ëÉí£©ÓÅ»¯ÈËÌå×ËÌ¬ºÍÌåÐÍ£¬Í¼~\ref{fig:single_view_Zhou}£¨d£©¡£
 \begin{figure}[H]
   \centering
@@ -423,13 +423,13 @@ ZhouµÈÈË~\cite{zhou2010parametric}~µÄ¹¤×÷¸úJainµÈÈË~\cite{jain2010moviereshape}~
 \end{figure}
 
 YuµÈÈË~\cite{yu2015direct}~¸úÇ°Ãæ·½·¨µÄÖ÷ÒªÇø±ðÔÚÓÚËûÃÇ²¢Ã»ÓÐÊ¹ÓÃ²ÎÊý»¯Ä£ÐÍ£¬µ«ÊÇËûÃÇÒ²ÐèÒªÓÃ~SFM~µÄ·½·¨»ñÈ¡Ò»¸öÈËÁ³µÄÈýÎ¬Ä£ÐÍ£¬È»ºóÓÃÕâ¸öÄ£ÐÍÀ´×ö·Ç¸ÕÐÔÎïÌåµÄÊµÊ±¶¯Ì¬ÖØ½¨¡£
-ËûÃÇÖ÷ÒªÊÇÓÃ~SFM~ÖØ½¨Ê±µÃµ½Ä£ÐÍÃ¿¸öµãµÄÑÕÉ«ÐÅÏ¢£¬½«·Ç¸ÕÐÔÊµÊ±ÖØ½¨×ª»¯³ÉÓÅ»¯ÎÊÌâ¡£
+ËûÃÇ·½·¨µÄÖØµãÔÚÓÚÓÃ~SFM~ÖØ½¨Ê±µÃµ½Ä£ÐÍÃ¿¸öµãµÄÑÕÉ«ÐÅÏ¢×÷ÎªÏÈÑéÖªÊ¶£¬½«·Ç¸ÕÐÔÊµÊ±ÖØ½¨×ª»¯³ÉÓÅ»¯ÎÊÌâ¡£
 
 \section{±¾ÎÄÖ÷Òª¹¤×÷}
 
-ÓÉÓÚÈËÌå¾ßÓÐ½Ï¸ßµÄÁé»îÐÔ£¬µ¥¸öÏà»ú»ñÈ¡µÄ»ñÈ¡µÄÐÅÏ¢Ê®·ÖÓÐÏÞ£¬Òò´Ë×Ô¶¯»¯µÄ¶¯Ì¬ÈËÌåµÄµ¥Ïà»úÈýÎ¬ÖØ½¨Ò»Ö±ÊÇÒ»¸ö³äÂúÌôÕ½µÄÎÊÌâ¡£
-±¾ÎÄÌá³öµÄ·½·¨ÄÜ¹»½èÖúÒ»¸öÆÕÍ¨µÄ~RGB~Ïà»ú×Ô¶¯µÄÖØ½¨³öÒ»¸ö¶¯Ì¬µÄÈýÎ¬ÈËÌåÄ£ÐÍ£¬ÈçÍ¼~\ref{fig:introduction}¡£
-Í¼ÖÐµÚÒ»ÐÐÊÇÎÒÃÇÍ¨¹ýÏà»ú»ñÈ¡ÈËÌåÔË¶¯µÄÐòÁÐ£¬µÚ¶þÐÐÊÇÎÒÃÇÖØ½¨³öÀ´µÄÃ¿Ò»Ö¡ÖÐÈËÌåµÄÈýÎ¬Ä£ÐÍ¡£
+ÓÉÓÚÈËÌå¾ßÓÐ½Ï¸ßµÄÁé»îÐÔ£¬µ¥¸öÏà»ú»ñÈ¡µÄÐÅÏ¢Ê®·ÖÓÐÏÞ£¬Òò´Ë×Ô¶¯»¯µ¥Ïà»ú¶¯Ì¬ÈýÎ¬ÈËÌåÖØ½¨Ò»Ö±ÊÇÒ»¸ö³äÂúÌôÕ½µÄÎÊÌâ¡£
+±¾ÎÄÌá³öµÄ·½·¨ÄÜ¹»½èÖúÒ»¸öÆÕÍ¨µÄ~RGB~Ïà»ú×Ô¶¯µØÖØ½¨³öÒ»¸ö¶¯Ì¬µÄÈýÎ¬ÈËÌåÄ£ÐÍ£¬ÈçÍ¼~\ref{fig:introduction}¡£
+Í¼ÖÐµÚÒ»ÐÐÊÇÎÒÃÇÍ¨¹ýÏà»ú»ñÈ¡ÈËÌåÔË¶¯µÄÍ¼ÏñÐòÁÐ£¬µÚ¶þÐÐÊÇÎÒÃÇÖØ½¨³öÀ´µÄÃ¿Ò»Ö¡ÖÐÈËÌåµÄÈýÎ¬Ä£ÐÍ¡£
 \begin{figure}[ht]
   \centering
   % Requires \usepackage{graphicx}
@@ -440,19 +440,19 @@ YuµÈÈË~\cite{yu2015direct}~¸úÇ°Ãæ·½·¨µÄÖ÷ÒªÇø±ðÔÚÓÚËûÃÇ²¢Ã»ÓÐÊ¹ÓÃ²ÎÊý»¯Ä£ÐÍ£¬µ«Ê
 
 ÔÚÇ°ÈËµÄ¹¤×÷ÖÐ£¬ÈËÌåÔË¶¯»áÊ¹µÃÎÊÌâµÄÔ¼ÊøÌõ¼þ²»×ã²¢×îÖÕµ¼ÖÂÖØ½¨½á¹ûÖÊÁ¿ÏÂ½µ¡£
 µ«ÊÇ£¬ÎÒÃÇÍ¨¹ý¶ÔÈËÌåÔË¶¯·ÖÎö·¢ÏÖ£ºÈËÌåÔË¶¯¿ÉÒÔÌá¹©Ò»Ð©¶îÍâµÄÐÅÏ¢À´°ïÖúÎÒÃÇÌá¸ßÖØ½¨Ä£ÐÍµÄÖÊÁ¿¡£
-ÒòÎªµ¥Ïà»úÍ¼ÏñµÄ»ñÈ¡ÆäÊµÊÇ¶Ô¿Õ¼äÎïÌå×öÍ¶Ó°±ä»»£¬ÔÙ¼ÓÉÏÎïÌå±¾ÉíµÄÕÚµ²»áÊ¹µÃÎïÌåºÜ´óÒ»²¿·ÖÐÅÏ¢¶ªÊ§¡£
-µ«Èç¹ûÎïÌåÄÜ¹»ÔË¶¯ÆðÀ´£¬ÎÒÃÇ¾Í¿ÉÒÔÔÚÄ³¸öÊ±¼ä¶Î²¶»ñµ½Ö®Ç°ÕÚµ²µôµÄÒ»²¿·ÖÐÅÏ¢£¬½èÖúÕâÐ©ÐÅÏ¢ÎÒÃÇ¾Í¿ÉÒÔÌá¸ßÈËÌåÄ£ÐÍµÄÖØ½¨¾«¶È¡£
+ÒòÎªµ¥Ïà»úÍ¼ÏñµÄ»ñÈ¡ÆäÊµÊÇ¶Ô¿Õ¼äÎïÌå×öÍ¶Ó°±ä»»£¬ËùÒÔÕÚµ²±ØÈ»»áÊ¹µÃÎïÌåºÜ´óÒ»²¿·ÖÐÅÏ¢¶ªÊ§¡£
+µ«Èç¹ûÎïÌåÄÜ¹»ÔË¶¯ÆðÀ´£¬ÎÒÃÇ¾Í¿ÉÒÔÔÚÄ³¸öÊ±¼ä¶Î²¶»ñµ½Ö®Ç°ÒòÕÚµ²¶ø¶ªÊ§µÄÒ»²¿·ÖÐÅÏ¢£¬½èÖúÕâÐ©ÐÅÏ¢ÎÒÃÇ¾Í¿ÉÒÔÌá¸ßÈËÌåÄ£ÐÍµÄÖÊÁ¿¡£
 
 ËäÈ»ÈËÌåÊÇÒ»¸ö±È½Ï¸´ÔÓµÄ·Ç¸ÕÐÔÌå£¬µ«ÊÇÓÉÓÚÈËÌå¹Ç÷ÀµÄ´æÔÚ£¬ÈËÌåËùÄÜ²úÉúµÄÐÎ±äÊÇÓÐÏÞµÄ¡£
 ÔÚÈËÌåÔË¶¯¹ý³ÌÖÐ£¬ÎÒÃÇÀûÓÃÈËÌåÔË¶¯±ä»¯µÄÐÅÏ¢½«Í¼ÏñÉÏµÄÈËÌå´ÓÔË¶¯Ñ§ÉÏ½«Æä»®·Ö³ÉÐí¶àµÄ¡°¸ÕÐÔ¿é¡±£¬ÔÚ½Ï¶Ì¶ÔÊ±¼äÄÚÎÒÃÇ¾Í¿ÉÒÔºöÂÔ¡°¸ÕÐÔ¿ì¡±±íÃæ¶ÔÐÎ±ä¶ø½«Æä¿´×÷ÊÇÒ»¸ö¸ÕÌå£¬ÕâÑù¾Í½«ÈËÌåµÄ·Ç¸ÕÐÔÖØ½¨ÎÊÌâÍË»¯³É¸ÕÐÔÎïÌåµÄÈýÎ¬ÖØ½¨¡£
-¶ÔÓÚÈËÌå²»Í¬µÄ¡°¸ÕÐÔ¿ì¡±£¬ÎÒÃÇÓÃËü¸úÒ»¸ö²ÎÊý»¯µÄÈËÌåÄ£ÐÍ¶ÔÓ¦µÄ²¿Î»½øÐÐÈÚºÏ±äÐÎ¡£
+¶ÔÓÚÈËÌå²»Í¬µÄ¡°¸ÕÐÔ¿ì¡±£¬ÎÒÃÇ°ÑËüºÍÒ»¸ö²ÎÊý»¯µÄÈËÌåÄ£ÐÍ¶ÔÓ¦µÄ²¿Î»½øÐÐÈÚºÏ±äÐÎ¡£
 Ëæ×ÅÊý¾ÝµÄ²»¶ÏÔö¼Ó£¬²ÎÊý»¯Ä£ÐÍ²»Í¬µÄÉíÌå²¿·Ö¸úÕæÊµµÄÈËÌåµÄÊµ¼ÊÄ£ÐÍÖ®¼äµÄ²î¾àÔ½À´Ô½Ð¡£¬×îÖÕµÃµ½Ò»¸ö¾«¶È½Ï¸ßµÄÈýÎ¬ÈËÌåÄ£ÐÍ¡£
 ÓÉÓÚÎÒÃÇ×îÖÕµÃµ½µÄÄ£ÐÍ±¾ÉíÊÇÒ»¸ö²ÎÊý»¯µÄÄ£ÐÍ£¬Òò´ËÎÒÃÇ¿ÉÒÔ½«Æä±ä»»µ½ÈËÌå²»Í¬×ËÊÆÏÂÈçÍ¼~\ref{fig:introduction}~ÖÐµÚ¶þÐÐ¡£
-Òò´Ë£¬±¾ÎÄµÄÖ÷Òª¹¤×÷¿ÉÒÔ×Ü½áÎªÒ»ÏÂ¼¸µã£º
+Òò´Ë£¬±¾ÎÄµÄÖ÷Òª¹¤×÷¿ÉÒÔ×Ü½áÎªÒÔÏÂ¼¸µã£º
 \begin{itemize}
   \item ÀûÓÃ¿¨¶ûÂüÂË²¨Æ÷ÓÅ»¯ÌáÈ¡µ½µÄÈýÎ¬ÈËÌå×ËÌ¬£»
-  \item ÂÊÏÈÌá³ö½«ÈËÌåµÄÔË¶¯×÷Îª·ÖÀàÍ¼ÏñÉÏÈËÌå²¿Î»µÄÖØÒªÒÀ¾Ý£¬²¢ÔÚ´Ë»ù´¡ÉÏÌá³öÒ»¸öÔË¶¯Ñ§·ÖÀàÆ÷£¬½áºÏÈËÌåÔÚÍ¼ÏñÉÏµÄÔË¶¯£¬½«Í¼ÏñÉÏÈËÌå²¿Î»½øÐÐ·ÖÀà£¬¾ßÓÐ½Ï¸ßµÄ¾«¶È£»
-  \item ½« SCAPE Ä£ÐÍ¸úÖØ½¨³öÀ´µÄÈËÌå²¿Î»Ä£ÐÍ½øÐÐÈÚºÏ£¬ÌáÈ¡ÈËÌåÄ£ÐÍÔÚÔË¶¯¹ý³ÌÖÐµÄ¡°¸ÕÐÔ³É·Ö¡±ºÍ¡°·Ç¸ÕÐÔ³É·Ö¡±£¬¡°¸ÕÐÔ³É·Ö¡±¿ÉÒÔÓÃÀ´¹À¼ÆÈËÌåµÄÌåÐÍ²ÎÊý£¬¡°·Ç¸ÕÐÔ³É·Ö¡±¿ÉÒÔÓÃÀ´»Ö¸´²»Í¬Ö¡ÏÂÈËÌå½ÏÎª¾«Ï¸µÄÄ£ÐÍ£»
+  \item ÂÊÏÈÌá³ö½«ÈËÌåµÄÔË¶¯×÷Îª·ÖÀàÍ¼ÏñÉÏÈËÌå²¿Î»µÄÖØÒªÒÀ¾Ý£¬²¢ÔÚ´Ë»ù´¡ÉÏÌá³öÒ»¸öÔË¶¯Ñ§·ÖÀàÆ÷£¬½«Í¼ÏñÉÏÈËÌå²¿Î»½øÐÐ·ÖÀà£¬¾ßÓÐ½Ï¸ßµÄ¾«¶È£»
+  \item ½«~SCAPE~Ä£ÐÍ¸úÖØ½¨³öÀ´µÄÈËÌå²¿Î»Ä£ÐÍ½øÐÐÈÚºÏ£¬ÌáÈ¡ÈËÌåÄ£ÐÍÔÚÔË¶¯¹ý³ÌÖÐµÄ¡°¸ÕÐÔ³É·Ö¡±ºÍ¡°·Ç¸ÕÐÔ³É·Ö¡±£¬¡°¸ÕÐÔ³É·Ö¡±¿ÉÒÔÓÃÀ´¹À¼ÆÈËÌåµÄÌåÐÍ²ÎÊý£¬¡°·Ç¸ÕÐÔ³É·Ö¡±¿ÉÒÔÓÃÀ´»Ö¸´²»Í¬Ö¡ÏÂÈËÌå½ÏÎª¾«Ï¸µÄÄ£ÐÍ£»
 \end{itemize}
 ÓëÇ°ÈËµÄ·½·¨Ïà±È±¾ÎÄËù½éÉÜµÄ·½·¨ÓÐÈçÏÂÓÅÊÆ£º
 \begin{itemize}
@@ -467,7 +467,7 @@ YuµÈÈË~\cite{yu2015direct}~¸úÇ°Ãæ·½·¨µÄÖ÷ÒªÇø±ðÔÚÓÚËûÃÇ²¢Ã»ÓÐÊ¹ÓÃ²ÎÊý»¯Ä£ÐÍ£¬µ«Ê
 \section{±¾ÎÄµÄÕÂ½Ú×éÖ¯ÐÎÊ½}
 \label{sec:structure}
 
-±¾ÎÄÑÐ¾¿µÄÖØµãÑÐ¾¿µÄÎÊÌâÊÇÈçºÎÀûÓÃÒ»¸öÆÕÍ¨µÄ~RGB~Ïà»úÍ¨¹ýÅÄÉãÈËÌåÔË¶¯µÄÊÓÆµ£¬×Ô¶¯ÖØ½¨³ö¸ßÖÊÁ¿µÄÈËÈýÎ¬Ä£ÐÍ¡£
+±¾ÎÄÖØµãÑÐ¾¿µÄÎÊÌâÊÇÈçºÎÀûÓÃÒ»¸öÆÕÍ¨µÄ~RGB~Ïà»úÍ¨¹ýÅÄÉãÈËÌåÔË¶¯µÄÊÓÆµ£¬×Ô¶¯ÖØ½¨³ö¸ßÖÊÁ¿µÄÈýÎ¬ÈËÌåÄ£ÐÍ¡£
 ÎªÁËÑéÖ¤·½·¨µÄÓÐÐ§ÐÔºÍÎÈ¶¨ÐÔ£¬ÎÒÃÇ½¨Á¢ÁËÒ»¸öÊý¾Ý¼¯¶ÔÎÒÃÇµÄ·½·¨½øÐÐÑéÖ¤¡¢¶Ô±È¡£
 ±¾ÎÄµÄÕÂ½Ú×éÖ¯ÈçÏÂ£º
 
@@ -484,7 +484,7 @@ YuµÈÈË~\cite{yu2015direct}~¸úÇ°Ãæ·½·¨µÄÖ÷ÒªÇø±ðÔÚÓÚËûÃÇ²¢Ã»ÓÐÊ¹ÓÃ²ÎÊý»¯Ä£ÐÍ£¬µ«Ê
 
 µÚÈýÕÂ£º½áÂÛºÍÌÖÂÛ¡£ÎÒÃÇ¹«²¼ÁËÊµÑéÖÐËùÓÐ²ÎÊýµÄ¾ßÌåÊýÖµ£¬ÒÔ±ãÓÚ¶ÁÕßÊµÏÖ¸ÃÏµÍ³¡£
 ÎªÁËÑéÖ¤ÏµÍ³µÄÓÐÐ§ÐÔºÍÂ³°ôÐÔ£¬ÎÒÃÇÓÃ²»Í¬µÄÊý¾Ý¶ÔÏµÍ³½øÐÐÑéÖ¤£¬²¢¸ú±ðÈËµÄËã·¨½øÐÐ¶¨ÐÔºÍ¶¨Á¿µÄÏ¸ÖÂ·ÖÎö¡£
-×îºó·ÖÎöÁËÎÒÃÇËã·¨µÄÊ±¼ä¸´ÔÓ¶È£¬ÕÒ³öÎÒÃÇ·½·¨µÄÐ§ÂÊÆ¿¾±£¬ÕÒ³öÏµÍ³¿ÉÄÜµÄ¸Ä½ø·½Ïò¡£
+×îºó·ÖÎöÁËÎÒÃÇËã·¨µÄÊ±¼ä¸´ÔÓ¶È£¬ÕÒ³öÎÒÃÇ·½·¨µÄÐ§ÂÊÆ¿¾±£¬È·¶¨ÏµÍ³¿ÉÄÜµÄ¸Ä½ø·½Ïò¡£
 
 µÚËÄÕÂ£º×Ü½áÓëÕ¹Íû¡£×Ü½á±¾ÎÄµÄ¹¤×÷£¬Ç¿µ÷ÎÒÃÇ·½·¨µÄ¿ÉÐÐÐÔºÍ´´ÐÂÐÔ£¬Í¬Ê±Ö¸³öÎÒÃÇ·½·¨µÄ²»×ãÖ®´¦ÒÔ¼°ºóÐø¸Ä½øµÄ·½Ïò¡£
 
