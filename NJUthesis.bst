@@ -1,11 +1,11 @@
 %%
 %% This is file `model2-names.bst',
-%% 
+%%
 %% Copyright 2009 Elsevier Ltd
-%% 
+%%
 %% This file is part of the 'Elsarticle Bundle'.
 %% ---------------------------------------------
-%% 
+%%
 %% It may be distributed under the conditions of the LaTeX Project Public
 %% License, either version 1.2 of this license or (at your option) any
 %% later version.  The latest version of this license is in
@@ -16,7 +16,7 @@
 %% $Id: model2-names.bst 140 2009-10-07 12:24:29Z rishi $
 %%
 %% $URL: http://lenova.river-valley.com/svn/elsbst/trunk/New-Model-2/model2-names.bst $
-%% 
+%%
 
 ENTRY
   { address
@@ -56,7 +56,7 @@ FUNCTION {init.state.consts}
 STRINGS { s t}
 FUNCTION {output.comma}
 { ", " * write$}
-   
+
 FUNCTION {output.nonnull}
 { 's :=
   output.state mid.sentence =
@@ -1337,30 +1337,30 @@ FUNCTION {editor.sort}
 }
 FUNCTION {presort}
 { calc.label
-  label sortify
-  "    "
-  *
-  type$ "book" =
-  type$ "inbook" =
-  or
-    'author.editor.sort
-    { type$ "proceedings" =
-        'editor.sort
-        'author.sort
-      if$
-    }
-  if$
-  #1 entry.max$ substring$
-  'sort.label :=
-  sort.label
-  *
-  "    "
-  *
-  title field.or.null
-  sort.format.title
-  *
-  #1 entry.max$ substring$
-  'sort.key$ :=
+%  label sortify
+%  "    "
+%  *
+%  type$ "book" =
+%  type$ "inbook" =
+%  or
+%    'author.editor.sort
+%    { type$ "proceedings" =
+%        'editor.sort
+%        'author.sort
+%      if$
+%    }
+%  if$
+%  #1 entry.max$ substring$
+%  'sort.label :=
+%  sort.label
+%  *
+%  "    "
+%  *
+%  title field.or.null
+%  sort.format.title
+%  *
+%  #1 entry.max$ substring$
+%  'sort.key$ :=
 }
 
 ITERATE {presort}
@@ -1417,7 +1417,7 @@ FUNCTION {bib.sort.order}
   #1 entry.max$ substring$
   'sort.key$ :=
 }
-ITERATE {bib.sort.order}
+%ITERATE {bib.sort.order}
 SORT
 FUNCTION {begin.bib}
 { preamble$ empty$
