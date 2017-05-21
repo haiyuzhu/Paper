@@ -371,7 +371,7 @@ Robertini~µÈÈË~\cite{robertini2014efficient}~ÔÚ~Gall~µÈÈË~\cite{gall2009motion}~
 ×ÜµÄÀ´Ëµ£¬ÒòÎªµ¥ÊÓ½ÇÖÐÍ¶Ó°±ä»»ËðÊ§µÄÐÅÏ¢¹ý¶à¡¢ÎïÌå´æÔÚÕÚµ²£¬ËùÒÔÉÏÊö·½·¨»ò¶à»òÉÙ¶¼ÐèÒªÈËÎªµÄÌí¼ÓÒ»Ð©Ô¼Êø¶øÎÞ·¨×öµ½×Ô¶¯»¯µ¥ÊÓ½ÇÈýÎ¬ÈËÌåÖØ½¨¡£
 
 GuanµÈÈË~\cite{guan2009estimating}~µÄ·½·¨ÈçÍ¼~\ref{fig:single_view_Guan}~ËùÊ¾¡£
-ËûÃÇÊ×ÏÈ¼ÆËã³öµ¥·ùÍ¼ÏñÉÏµÄÈËÌå×ËÌ¬¡¢¹âÔ´·½Ïò¡¢ÈËÌåÌåÐÍÒÔ¼°Ç°¾°ºÍ±³¾°µÄ·Ö¸î£¬ÀûÓÃ¹«¿ªµÄÈËÌåÄ£ÐÍÊý¾Ý¼¯ÑµÁ·³ö~SCAPE~Ä£ÐÍ£¬¡£
+ËûÃÇÊ×ÏÈ¼ÆËã³öµ¥·ùÍ¼ÏñÉÏµÄÈËÌå×ËÌ¬¡¢¹âÔ´·½Ïò¡¢ÈËÌåÌåÐÍÒÔ¼°Ç°¾°ºÍ±³¾°µÄ·Ö¸î£¬ÀûÓÃ¹«¿ªµÄÈËÌåÄ£ÐÍÊý¾Ý¼¯ÑµÁ·³ö~SCAPE~Ä£ÐÍ¡£
 ½Ó×ÅÀûÓÃÈËÌåµÄÂÖÀª¡¢±ßÔµºÍÒõÓ°ÐÅÏ¢£¬½«Ò»¸ö¾²Ì¬ÈËÌåÄ£ÐÍÄâºÏµ½Í¼ÏñÉÏµÃµ½ÈËÌåµÄÌåÐÍÐÅÏ¢¡£
 ÓÉÓÚËûÃÇ³ä·ÖÀûÓÃÁËÍ¼ÏñÖÐµÄÒõÓ°¡¢±ßÔµÐÅÏ¢£¬ËùÒÔËûÃÇµÄ·½·¨¿ÉÒÔ´¦ÀíÈËÌåÓÐÕÚµ²µÄÇé¿ö¡£
 ¾¡¹ÜÈç´Ë£¬ËûÃÇµÄ·½·¨ÔÚÈËÌå×ËÌ¬¹À¼ÆÊ±ÐèÒªÊÖ¶¯ÔÚÍ¼ÏñÉÏ±ê×¢³öÈËÌå¹Ø½Úµã×÷Îª³õÖµ¡£
@@ -762,16 +762,15 @@ EMËã·¨Í¨¹ý·´¸´µü´úÇó½â¡°E-step¡±ºÍ¡°M-step¡±Ö±µ½º¯ÊýÊÕÁ²ÓÚÄ³Ò»¼«Öµ¡£
 \subsection{ÈËÌå²¿Î»ÔË¶¯Ñ§·ÖÀà}
 \label{sec:pipline_classification_filter}
 
-ÎÒÃÇ°ÑÃ¿Ò»Ö¡Í¼Ïñ¿´³ÉÊÇ¶¨ÒåÔÚ±äÁ¿ $\{I_1, \ldots, I_N\}$ ÉÏµÄËæ»ú³¡ $\bf{I}$£¬ÆäÖÐ $I_i$ ÊÇÍ¼ÏñÉÏÏñËØ $i$ Ëù´¦Î»ÖÃ $p_i$ ´¦µÄÏñËØÖµ£¬ $N$ ÊÇÍ¼ÏñÉÏÏñËØµãµÄ¸öÊý¡£
-´ËÍâ£¬Ëæ»ú³¡ $\bf{X}$ ÊÇ¶¨ÒåÔÚ±äÁ¿¼¯ $\{X_1, \ldots, X_N\}$ ÉÏÓÃÀ´¸øÃ¿¸öÏñËØ $i$ È·¶¨Æä·ÖÀà±êÇ© $X_i$ µÄ¡£
-ÎÒÃÇÓÃ $\mathbf{d_i}$ À´±íÊ¾ÏñËØ $i$ ÔÚÏàÁÚÖ¡ÉÏµÄÎ»ÒÆ£¬²¢ÇÒÍ¨¹ýÓÉ Brox ºÍ Malik~\cite{brox2011large}~Ìá³öµÄ´óÎ»ÒÆ¹âÁ÷Ëã·¨À´¼ÆËã³öÎ»ÒÆµÄ¾ßÌåÊýÖµ¡£
+ÎÒÃÇ°ÑÃ¿Ò»Ö¡Í¼Ïñ¿´³ÉÊÇ¶¨ÒåÔÚ±äÁ¿~$\{I_1, \ldots, I_N\}$~ÉÏµÄËæ»ú³¡~$\bf{I}$£¬ÆäÖÐ~$I_i$~ÊÇÍ¼ÏñÉÏÏñËØ~$i$~Ëù´¦Î»ÖÃ~$p_i$~´¦µÄÏñËØÖµ£¬$N$~ÊÇÍ¼ÏñÉÏÏñËØµãµÄ¸öÊý¡£
+´ËÍâ£¬Ëæ»ú³¡~$\bf{X}$~ÊÇ¶¨ÒåÔÚ±äÁ¿¼¯~$\{X_1, \ldots, X_N\}$~ÉÏÓÃÀ´¸øÃ¿¸öÏñËØ~$i$~È·¶¨Æä·ÖÀà±êÇ©~$X_i$~µÄ¡£
+ÎÒÃÇÓÃ~$\mathbf{d_i}$~À´±íÊ¾ÏñËØ~$i$~ÔÚÏàÁÚÖ¡ÉÏµÄÎ»ÒÆ£¬²¢ÇÒÍ¨¹ýÓÉ~Brox~ºÍ~Malik~\cite{brox2011large}~Ìá³öµÄ´óÎ»ÒÆ¹âÁ÷Ëã·¨À´¼ÆËã³öÎ»ÒÆµÄ¾ßÌåÊýÖµ¡£
 Èç¹«Ê½~\eqref{eqn:Gibbs_Enegy}~ËùÊ¾£¬Í¨¹ý×îÐ¡»¯Ìõ¼þËæ»ú³¡µÄ¼ª²¼Ë¹ÄÜÁ¿À´»ñµÃÃ¿¸öÏñËØµÄ×îÓÅ·ÖÀà½á¹û¡£
 \begin{equation}\label{eqn:Gibbs_Enegy}
   E\left(\bf{I, X}\right)=\sum_i\psi_u\left(I_i, X_i\right)+\sum_{i<j}\psi_p\left(X_i,X_j,I_i,I_j\right)
 \end{equation}
-ÆäÖÐ£¬±äÁ¿ $i$ ºÍ $j$ µÄÈ¡Öµ·¶Î§ÊÇ $\left[1, N\right]$¡£
-µ¥µãÊÆÄÜ£¨unary potential£© $\psi_u$ ÓÉ¹«Ê½~\eqref{eqn:classifier}~ÍÆµ¼¶ø³ö£¬Ëü±íÊ¾ÁË±êÇ© $X$ ºÍÊäÈëÍ¼Ïñ $I$ µÄÆ¥Åä³Ì¶È¡£
-
+ÆäÖÐ£¬±äÁ¿~$i$~ºÍ~$j$~µÄÈ¡Öµ·¶Î§ÊÇ~$\left[1, N\right]$¡£
+µ¥µãÊÆÄÜ£¨unary potential£©~$\psi_u$~ÓÉ¹«Ê½~\eqref{eqn:classifier}~ÍÆµ¼¶ø³ö£¬Ëü±íÊ¾ÁË±êÇ©~$X$~ºÍÊäÈëÍ¼Ïñ~$I$~µÄÆ¥Åä³Ì¶È¡£
 \begin{equation}\label{eqn:classifier}
 \begin{aligned}
   &C\left(I_i, X_i\right)=
@@ -782,24 +781,23 @@ EMËã·¨Í¨¹ý·´¸´µü´úÇó½â¡°E-step¡±ºÍ¡°M-step¡±Ö±µ½º¯ÊýÊÕÁ²ÓÚÄ³Ò»¼«Öµ¡£
   &{\omega_s + \omega_j + \omega_m = 1}
 \end{aligned}
 \end{equation}
-ÆäÖÐ {$\omega_s$, $\omega_j$} ºÍ {$\omega_m$} ÊÇÈ¨ÖØÒò×Ó£¬²¢ÇÒ $\mathbf{S}\left(X_i\right)$ ±íÊ¾Ã¿¸ö·ÖÀà±êÇ© $X_i$ Ëù¶ÔÓ¦µÄÍ¼ÏñÉÏÈËÌåÂÖÀªµã¡£
-ÒòÎª~SCAPE~Ä£ÐÍÉÏÓÐ²»Í¬Ö«Ìå²¿Î»Ëù¶ÔÓ¦µã¼¯µÄÐÅÏ¢£¬ËùÒÔ²»Í¬±êÇ© $X_i$ Ëù¶ÔÓ¦µÄÈËÌåÂÖÀªµã¿ÉÒÔÍ¨¹ý½«~SCAPE~Ä£ÐÍÍ¶Ó°µ½Í¼ÏñÉÏ£¬ÀûÓÃ~CPD~\cite{myronenko2010point}~Ëã·¨½«Ä£ÐÍµÄÂÖÀªºÍÈËÌåµÄÂÖÀª½øÐÐ·Ç¸ÕÐÔÅä×¼µÃµ½¡£
-ÂÖÀªÏîÄÜÁ¿ $u_s$ ÊÇÓÉ¼ÆËãÍ¼ÏñÉÏ $p_i$ ´¦µÄµãºÍÈËÌåÂÖÀªÉÏµãµÄ×îÐ¡¶þ³Ë¾àÀë±íÊ¾µÄ¡£
+ÆäÖÐ~{$\omega_s$£¬$\omega_j$}~ºÍ~{$\omega_m$}~ÊÇÈ¨ÖØÒò×Ó£¬²¢ÇÒ~$\mathbf{S}\left(X_i\right)$~±íÊ¾Ã¿¸ö·ÖÀà±êÇ©~$X_i$~Ëù¶ÔÓ¦µÄÍ¼ÏñÉÏÈËÌåÂÖÀªµã¡£
+ÒòÎª~SCAPE~Ä£ÐÍÉÏÓÐ²»Í¬Ö«Ìå²¿Î»Ëù¶ÔÓ¦µã¼¯µÄÐÅÏ¢£¬ËùÒÔ²»Í¬±êÇ©~$X_i$~Ëù¶ÔÓ¦µÄÈËÌåÂÖÀªµã¿ÉÒÔÍ¨¹ý½«~SCAPE~Ä£ÐÍÍ¶Ó°µ½Í¼ÏñÉÏ£¬ÀûÓÃ~CPD~\cite{myronenko2010point}~Ëã·¨½«Ä£ÐÍµÄÂÖÀªºÍÈËÌåµÄÂÖÀª½øÐÐ·Ç¸ÕÐÔÅä×¼µÃµ½¡£
+ÂÖÀªÏîÄÜÁ¿~$u_s$~ÊÇÓÉ¼ÆËãÍ¼ÏñÉÏ~$p_i$~´¦µÄµãºÍÈËÌåÂÖÀªÉÏµãµÄ×îÐ¡¶þ³Ë¾àÀë±íÊ¾µÄ¡£
 \begin{equation}\label{eqn:clas_sil}
   u_s\left(p_i,\mathbf{S}\left(X_i\right)\right)=\exp\left(-\frac{\min\left(\left|p_i-\mathbf{S}\left(X_i\right)\right|^2\right)}{2\theta_s^2}\right)
 \end{equation}
-$\mathbf{B}\left(X_i\right)$ ÊÇÍ¼ÏñÉÏ±»±ê¼ÇÎª $X_i$ µÄ¹Ç÷ÀµÄÖØÐÄ¡£
-Òò´Ë£¬¹Ø½ÚÏîÄÜÁ¿ $u_j$ Í¨¹ý¹«Ê½~\eqref{eqn:clas_joint}¼ÆËãµÃµ½¡£
+$\mathbf{B}\left(X_i\right)$~ÊÇÍ¼ÏñÉÏ±»±ê¼ÇÎª~$X_i$~µÄ¹Ç÷ÀµÄÖØÐÄ¡£
+Òò´Ë£¬¹Ø½ÚÏîÄÜÁ¿~$u_j$~Í¨¹ý¹«Ê½~\eqref{eqn:clas_joint}~¼ÆËãµÃµ½¡£
 \begin{equation}\label{eqn:clas_joint}
   u_j\left(p_i,\mathbf{B}\left(X_i\right)\right)=\exp\left(-\frac{\left|p_i - \mathbf{B}\left(X_i\right)\right|^2}{2\theta_j^2}\right)
 \end{equation}
-ÆäÖÐ²ÎÊý $\theta_s$ ºÍ $\theta_j$ ¿ØÖÆÍ¼ÏñÉÏÏñËØµã¼äµÄÁ¬½ÓÇ¿¶ÈºÍ·¶Î§¡£
+ÆäÖÐ²ÎÊý~$\theta_s$~ºÍ~$\theta_j$~¿ØÖÆÍ¼ÏñÉÏÏñËØµã¼äµÄÁ¬½ÓÇ¿¶ÈºÍ·¶Î§¡£
 
-´ËÍâ£¬ÎÒÃÇÌá³öÁËÔË¶¯ÏîÄÜÁ¿ $u_m$ À´±íÊ¾ÏñËØ $I_i$ µÄÔË¶¯¸ú¸ÕÐÔ¿é $X_i$ µÄÔË¶¯µÄÆ¥Åä³Ì¶È¡£
-$\mathbf{D}\left(X_i\right)$ ±íÊ¾±êÇ©Îª $X_i$ µÄ¹Ç÷ÀµÄÖØÐÄÎ»ÒÆ£¬Õâ¸öÊÇÍ¨¹ýÏàÁÚÖ¡ÉÏÈËÌå×ËÌ¬µÄ±ä»¯¼ÆËãµÃµ½¡£
-ÏñËØ $I_i$ µÄÔË¶¯ÊÇÍ¨¹ý LDOF£¨Large Displace Optical Flow£©~\cite{brox2011large}~¹âÁ÷Ëã·¨»ñÈ¡µ½µÄ£¬ÎÒÃÇ½«µÃµ½µÄ¹âÁ÷Ó³Éäµ½ÑÕÉ«¿Õ¼ä£¬ÓÃ²»Í¬µÄÑÕÉ«À´±íÊ¾¹âÁ÷µÄ·½Ïò£¬ÓÃ²»Í¬µÄÁÁ¶È±íÊ¾¹âÁ÷µÄ´óÐ¡£¬½á¹ûÈçÍ¼~\ref{fig:optical_flow}ÖÐ£¨c£©ËùÊ¾¡£
+´ËÍâ£¬ÎÒÃÇÌá³öÁËÔË¶¯ÏîÄÜÁ¿~$u_m$~À´±íÊ¾ÏñËØ~$I_i$~µÄÔË¶¯¸ú¸ÕÐÔ¿é~$X_i$~µÄÔË¶¯µÄÆ¥Åä³Ì¶È¡£
+$\mathbf{D}\left(X_i\right)$~±íÊ¾±êÇ©Îª~$X_i$~µÄ¹Ç÷ÀµÄÖØÐÄÎ»ÒÆ£¬Õâ¸öÊÇÍ¨¹ýÏàÁÚÖ¡ÉÏÈËÌå×ËÌ¬µÄ±ä»¯¼ÆËãµÃµ½¡£
+ÏñËØ~$I_i$~µÄÔË¶¯ÊÇÍ¨¹ý~LDOF£¨Large Displace Optical Flow£©~\cite{brox2011large}~¹âÁ÷Ëã·¨»ñÈ¡µ½µÄ£¬ÎÒÃÇ½«µÃµ½µÄ¹âÁ÷Ó³Éäµ½ÑÕÉ«¿Õ¼ä£¬ÓÃ²»Í¬µÄÑÕÉ«À´±íÊ¾¹âÁ÷µÄ·½Ïò£¬ÓÃ²»Í¬µÄÁÁ¶È±íÊ¾¹âÁ÷µÄ´óÐ¡£¬½á¹ûÈçÍ¼~\ref{fig:optical_flow}ÖÐ£¨c£©ËùÊ¾¡£
 ´ÓÍ¼ÖÐ¿ÉÒÔ¿´³ö£¬ÔÚÄ³Ò»Ê±¿ÌÍ¬Ò»²¿Î»µÄÔË¶¯ÊÇ¼«ÆäÏàËÆµÄ£¬´Ó¶øËµÃ÷²»Í¬²¿Î»µÄÔË¶¯ÌØµãÈ·ÊµÊÇ»®·Ö²»Í¬ÉíÌå²¿Î»µÄ¿É¿¿ÒÀ¾Ý¡£
-
 \begin{figure}[ht]
   \centering
   \subfigure[]{
@@ -818,9 +816,9 @@ $\mathbf{D}\left(X_i\right)$ ±íÊ¾±êÇ©Îª $X_i$ µÄ¹Ç÷ÀµÄÖØÐÄÎ»ÒÆ£¬Õâ¸öÊÇÍ¨¹ýÏàÁÚÖ¡
 \begin{equation}\label{eqn:clas_move}
   u_m\left(\mathbf{d_i},\mathbf{D}\left(X_i\right)\right)=\rho_{\mathbf{d}}\left(1 + \frac{\mathbf{d_i}\cdot \mathbf{D}\left( X_i\right)}{\left|\mathbf{d_i}\right|\left|\mathbf{D}\left(X_i\right)\right|}\right)
 \end{equation}
-ÔË¶¯ÏîÄÜÁ¿Í¨¹ýÆÀ¹ÀÏñËØ $I_i$ ºÍ±êÇ©Îª $X_i$ µÄ¹Ç÷ÀÖØÐÄµÄÎ»ÒÆÆ¥Åä³Ì¶ÈÌá¸ßÁËÍ¼ÏñÉÏÈËÌå²¿Î»·ÖÀàµÄ¾«¶È¡£
+ÔË¶¯ÏîÄÜÁ¿Í¨¹ýÆÀ¹ÀÏñËØ~$I_i$~ºÍ±êÇ©Îª~$X_i$~µÄ¹Ç÷ÀÖØÐÄµÄÎ»ÒÆÆ¥Åä³Ì¶ÈÌá¸ßÁËÍ¼ÏñÉÏÈËÌå²¿Î»·ÖÀàµÄ¾«¶È¡£
 
-¹«Ê½~\eqref{eqn:Gibbs_Enegy}~ÖÐ³É¶ÔµãÊÆÄÜ£¨pairwise potentials£© $\psi_p$ ÊÇÓÉ¹«Ê½~\eqref{eqn:pair_wise}~¼ÆËãµÃµ½¡£
+¹«Ê½~\eqref{eqn:Gibbs_Enegy}~ÖÐ³É¶ÔµãÊÆÄÜ£¨pairwise potentials£©$\psi_p$~ÊÇÓÉ¹«Ê½~\eqref{eqn:pair_wise}~¼ÆËãµÃµ½¡£
 \begin{myequation}\label{eqn:pair_wise}
 \begin{aligned}
   \psi_p&\left(X_i,X_j,I_i,I_j\right)=
@@ -828,15 +826,14 @@ $\mathbf{D}\left(X_i\right)$ ±íÊ¾±êÇ©Îª $X_i$ µÄ¹Ç÷ÀµÄÖØÐÄÎ»ÒÆ£¬Õâ¸öÊÇÍ¨¹ýÏàÁÚÖ¡
   +\mu\left(x_i,x_j\right)\exp\left(u_m\left(\mathbf{d_i},\mathbf{d_j}\right)-1\right)
 \end{aligned}
 \end{myequation}
-ÆäÖÐ$\theta_{\alpha}$ ºÍ $\theta_{\beta}$ ²ÎÊý±íÊ¾ÁËÍ¼ÏñÉÏÏñËØµã¼äµÄÏàËÆ³Ì¶ÈºÍÁÙ½ü³Ì¶È¡£
-±êÇ©¼æÈÝº¯Êý $\mu\left(x_i,x_j\right)$ Í¨¹ý²¨ÌØÄ£ÐÍµÃµ½£¬$\mu\left(x_i,x_j\right)=\left[x_i\not=x_j\right]$¡£
-$\psi_p$ µÄ×÷ÓÃÊÇ´¦ÓÚÄ³¸öÇøÓòÖÐÓÐÏàËÆÔË¶¯µÄÏñËØµã¸üÓÐ¿ÉÄÜÊôÓÚÍ¬Ò»¸öÖ«Ìå²¿Î»¡£
+ÆäÖÐ~$\theta_{\alpha}$~ºÍ~$\theta_{\beta}$~²ÎÊý±íÊ¾ÁËÍ¼ÏñÉÏÏñËØµã¼äµÄÏàËÆ³Ì¶ÈºÍÁÙ½ü³Ì¶È¡£
+±êÇ©¼æÈÝº¯Êý~$\mu\left(x_i,x_j\right)$~Í¨¹ý²¨ÌØÄ£ÐÍµÃµ½£¬$\mu\left(x_i,x_j\right)=\left[x_i\not=x_j\right]$¡£
+$\psi_p$~µÄ×÷ÓÃÊÇ´¦ÓÚÄ³¸öÇøÓòÖÐÓÐÏàËÆÔË¶¯µÄÏñËØµã¸üÓÐ¿ÉÄÜÊôÓÚÍ¬Ò»¸öÖ«Ìå²¿Î»¡£
 ÎÒÃÇÊ¹ÓÃÓÉ~Krahenbuhl~µÈÈË~\cite{krahenbuhl2012efficient}~ÊµÏÖµÄ¸ßÐ§Æ½¾ù³¡Çó½â·½·¨À´ÓÅ»¯Ä¿±êº¯Êý~\eqref{eqn:Gibbs_Enegy}¡£
 
-ÎªÁË¼ìÑé¹«Ê½~\eqref{eqn:classifier}~ÖÐÎÒÃÇÌá³öµÄÔË¶¯ÏîµÄÓÐÐ§ÐÔ£¬ÎÒÃÇÈÃ $\omega_{m} = 0$£¬È»ºóÓÃÍ¬ÑùµÄÇó½â·½·¨À´Çó½âÉÏÊöµÄ³íÃÜÌõ¼þËæ»ú³¡¡£
+ÎªÁË¼ìÑé¹«Ê½~\eqref{eqn:classifier}~ÖÐÎÒÃÇÌá³öµÄÔË¶¯ÏîµÄÓÐÐ§ÐÔ£¬ÎÒÃÇÈÃ~$\omega_{m} = 0$£¬È»ºóÓÃÍ¬ÑùµÄÇó½â·½·¨À´Çó½âÉÏÊöµÄ³íÃÜÌõ¼þËæ»ú³¡¡£
 ¶Ô±È½á¹ûÈçÍ¼~\ref{fig:classification}~ËùÊ¾£¬°üº¬ÔË¶¯ÏîËùµÃµ½µÄ·ÖÀà½á¹û£¨Í¼ÖÐÓÒ±ßµÄ½á¹û£©±ÈÃ»ÓÐÀûÓÃÔË¶¯Ïî»ñµÃµÄ½á¹û£¨Í¼ÖÐÖÐ¼äµÄ½á¹û£©Òª¾«È·ºÜ¶à¡£
 ÓÐÔË¶¯Ïî´æÔÚµÄÇé¿öÏÂÈËÌåµÄÓÒÍÈºÍ¸¹²¿Ö®¼äµÄ»®·Ö¸ü¼Ó×¼È·£¬²¢ÇÒÔÚÊÖ±ÛÕÚµ²×¡ÐØ¿ÚµÄÇé¿öÏÂÒ²ÄÜ×¼È·Çø·ÖÊÖ±ÛºÍÐØ²¿¡£
-
 \begin{figure}[h]
  \centering
  % Requires \usepackage{graphicx}
@@ -868,18 +865,18 @@ $\psi_p$ µÄ×÷ÓÃÊÇ´¦ÓÚÄ³¸öÇøÓòÖÐÓÐÏàËÆÔË¶¯µÄÏñËØµã¸üÓÐ¿ÉÄÜÊôÓÚÍ¬Ò»¸öÖ«Ìå²¿Î»¡£
   \label{fig:BA}
 \end{figure}
 
-ÎÒÃÇÓÃ $\pi$ : $\Re^3\to\Re^2$ ±íÊ¾Í¶Ó°º¯Êý£¬Òò´Ë¹âÊøÆ½²î·¨µÄÄ¿±êº¯Êý¾ÍÊÇ£º
+ÎÒÃÇÓÃ~$\pi$:~$\Re^3\to\Re^2$~±íÊ¾Í¶Ó°º¯Êý£¬Òò´Ë¹âÊøÆ½²î·¨µÄÄ¿±êº¯Êý¾ÍÊÇ£º
 \begin{equation}\label{eqn:BA}
   E_{BA}=\sum_{j=f_b}^{i} \sum_{k \in B_b} \left\| p_{j}^k - \pi \left( r_j^bP_k + t_j^b \right) \right\|^2
 \end{equation}
-ÆäÖÐÖ¡µÄË÷ÒýÊÇ´Ó $f_b$ ±ä»¯µ½ $f_{i}$¡£
-ÉíÌå²¿Î» $B_b$ ÉÏµÚ $k$ ¸öµãµÄÈýÎ¬¿Õ¼äÎ»ÖÃÎÒÃÇÓÃ $P_k$ À´±íÊ¾£¬µã $P_k$ ÔÚµÚ $j$ Ö¡ÉÏµÄÍ¶Ó°ÊÇ $p_{j}^k$¡£
-$T_j^b=\left[r_j^b|t_j^b\right]$ ±íÊ¾Ïà»úÔÚµÚ $j$ Ö¡Ê±ÅÄÉãÉíÌå²¿Î» $B_b$ Ê±Ïà¶ÔµÄÏà»úÎ»ÖÃ¡£
-ÕâÀïÏà»úµÄÏà¶ÔÎ»ÖÃ $T_j^b$ ÊÇÇø±ðÓÚÏà»úµÄ¾ø¶ÔÎ»ÖÃ $T_j^\ast$ µÄ£¬Ïà»úÏà¶ÔÎ»ÖÃ²»½ö°üº¬ÁËÉíÌå²¿Î» $B_b$ µÄÔË¶¯»¹°üº¬ÁËÏà»ú±¾ÉíµÄÔË¶¯¡£
-ÒÔÉíÌå²¿Î» $B_b$ µÄÔË¶¯ÎªÀý£¬ÎÒÃÇ¿ÉÒÔ½«²Î¿¼Ö¡ $f_b$ ¶ÔÓ¦µÄÈýÎ¬ÈËÌå¹Ç¼ÜÇý¶¯µ½µ±Ç°Ö¡ $j$ Ö¡ÏÂ¾Í¿ÉÒÔ»ñµÃÏà»ú¶ÔÓÚÉíÌå²¿Î» $B_b$ µÄÏà¶ÔÎ»ÖÃ±ä»»¾ØÕó $\Delta{T_{f_b\to{j}}^b}$¡£
-Òò´Ë£¬Ïà»úÏà¶ÔÎ»ÖÃ $T_j^b = \Delta{T_{f_b\to{j}}^b} T_{f_b}^\ast$¡£
+ÆäÖÐÖ¡µÄË÷ÒýÊÇ´Ó~$f_b$~±ä»¯µ½~$f_{i}$¡£
+ÉíÌå²¿Î»~$B_b$~ÉÏµÚ~$k$~¸öµãµÄÈýÎ¬¿Õ¼äÎ»ÖÃÎÒÃÇÓÃ~$P_k$~À´±íÊ¾£¬µã~$P_k$~ÔÚµÚ~$j$~Ö¡ÉÏµÄÍ¶Ó°ÊÇ~$p_{j}^k$¡£
+$T_j^b=\left[r_j^b|t_j^b\right]$~±íÊ¾Ïà»úÔÚµÚ~$j$~Ö¡Ê±ÅÄÉãÉíÌå²¿Î»~$B_b$~Ê±Ïà¶ÔµÄÏà»úÎ»ÖÃ¡£
+ÕâÀïÏà»úµÄÏà¶ÔÎ»ÖÃ~$T_j^b$~ÊÇÇø±ðÓÚÏà»úµÄ¾ø¶ÔÎ»ÖÃ~$T_j^\ast$~µÄ£¬Ïà»úÏà¶ÔÎ»ÖÃ²»½ö°üº¬ÁËÉíÌå²¿Î»~$B_b$~µÄÔË¶¯»¹°üº¬ÁËÏà»ú±¾ÉíµÄÔË¶¯¡£
+ÒÔÉíÌå²¿Î»~$B_b$~µÄÔË¶¯ÎªÀý£¬ÎÒÃÇ¿ÉÒÔ½«²Î¿¼Ö¡~$f_b$~¶ÔÓ¦µÄÈýÎ¬ÈËÌå¹Ç¼ÜÇý¶¯µ½µ±Ç°Ö¡~$j$~Ö¡ÏÂ¾Í¿ÉÒÔ»ñµÃÏà»ú¶ÔÓÚÉíÌå²¿Î»~$B_b$~µÄÏà¶ÔÎ»ÖÃ±ä»»¾ØÕó~$\Delta{T_{f_b\to{j}}^b}$¡£
+Òò´Ë£¬Ïà»úÏà¶ÔÎ»ÖÃ~$T_j^b = \Delta{T_{f_b\to{j}}^b} T_{f_b}^\ast$¡£
 
-ÎÒÃÇÊ¹ÓÃÏ¡Êè¹âÊøÆ½²î·¨~\cite{lourakis2009sba}~À´×îÐ¡»¯´ú¼Ûº¯Êý~\eqref{eqn:BA}~£¬´Ó¶øÔÚ±£Ö¤¼ÆËãÐ§ÂÊµÄÍ¬Ê±Ò²²»»áÕ¼ÓÃ¹ý¶àµÄÄÚ´æ¡£
+ÎÒÃÇÊ¹ÓÃÏ¡Êè¹âÊøÆ½²î·¨~\cite{lourakis2009sba}~À´×îÐ¡»¯´ú¼Ûº¯Êý~\eqref{eqn:BA}£¬´Ó¶øÔÚ±£Ö¤¼ÆËãÐ§ÂÊµÄÍ¬Ê±Ò²²»»áÕ¼ÓÃ¹ý¶àµÄÄÚ´æ¡£
 
 \subsection{³íÃÜÈýÎ¬ÖØ½¨}
 \label{sec:pipeline_reconstruction}
@@ -910,11 +907,11 @@ $T_j^b=\left[r_j^b|t_j^b\right]$ ±íÊ¾Ïà»úÔÚµÚ $j$ Ö¡Ê±ÅÄÉãÉíÌå²¿Î» $B_b$ Ê±Ïà¶Ôµ
 \ENDFOR
 \end{algorithmic}
 \end{algorithm}
-Ëã·¨~\ref{algo:dense_rec}~ÖÐ $f_i$±íÊ¾ RGB Ïà»ú»ñÈ¡µ½µÄÍ¼ÏñÐòÁÐÖÐµÄµÚ $i$ Ö¡Í¼Ïñ£¬$B_i$ ±íÊ¾ÈËÌåÉÏµÚ $i$ ¸öÉíÌå²¿Î»¡£
+Ëã·¨~\ref{algo:dense_rec}~ÖÐ~$f_i$~±íÊ¾~RGB~Ïà»ú»ñÈ¡µ½µÄÍ¼ÏñÐòÁÐÖÐµÄµÚ~$i$~Ö¡Í¼Ïñ£¬$B_i$~±íÊ¾ÈËÌåÉÏµÚ~$i$~¸öÉíÌå²¿Î»¡£
 
 ¶ÔÓÚÃ¿¸öÉíÌå²¿Î»£¬ÒòÎªÔÚ½Ï¶ÌµÄÊ±¼äÄÚ¸Ã²¿Î»±íÃæµÄÐÎ±ä¿ÉÒÔºöÂÔ²»¼Æ£¬ËùÒÔÎÒÃÇÈÏÎªËüÔÚ½Ï¶ÌÊ±¼äÄÚµÄÔË¶¯ÊÇ¸ÕÐÔÔË¶¯¡£
 ÎÒÃÇÊ¹ÓÃ~LDOF~\cite{brox2011large}~Ëã·¨¼ÆËã²»Í¬Ö¡Ö®¼äÑÇÏñËØ¼¶µÄ³íÃÜ¹âÁ÷£¬²¢ÓÃ³íÃÜ¹âÁ÷À´¸ú×ÙÉíÌå²¿Î»ÔÚÕâ½Ï¶ÌÊ±¼äÄÚµÄÔË¶¯£¬´Ó¶øÒ²¾Í»ñµÃÍ¼ÏñÉÏÉíÌå²¿Î»µãµÄ¶ÔÓ¦¹ØÏµ¡£
-µ±ÈÎÒâÉíÌå²¿Î»ÔÚÍ¼ÏñÉÏµÄÁ¬ÐøÔË¶¯¾àÀë³¬¹ýãÐÖµ£¨20¸öÏñËØ£©Ê±£¬ÀýÈç£¬ÉíÌå²¿Î» $B_b$ µÄÔË¶¯¾àÀë³¬¹ýãÐÖµÊ±£¬ÎÒÃÇÑ¡È¡~$f_b$~Ö¡£¨ÉíÌå²¿Î»~$B_b$~ÔÚÍ¼ÏñÉÏ¿ªÊ¼ÔË¶¯£© µ½~$f_i$~Ö¡£¨ÉíÌå²¿Î» $B_b$ ÔÚÍ¼ÏñÉÏµÄÔË¶¯¾àÀë´ïµ½ãÐÖµ£©Ö®¼äµÄËùÓÐÖ¡£¬ÀûÓÃ $f_b$ Ö¡µ½ $f_i$ Ö¡Ö®¼äÏàÁÚÖ¡¼äµÄ³íÃÜ¹âÁ÷»ñÈ¡µ½ÏñËØµãÖ®¼äµÄ¶ÔÓ¦¹ØÏµ£¬×îºóÀûÓÃ¹âÊøÆ½²î·¨¾Í¿ÉÒÔ»ñÈ¡ÉíÌå²¿Î» $B_b$ µÄÈýÎ¬Ä£ÐÍ¡£
+µ±ÈÎÒâÉíÌå²¿Î»ÔÚÍ¼ÏñÉÏµÄÁ¬ÐøÔË¶¯¾àÀë³¬¹ýãÐÖµ£¨20¸öÏñËØ£©Ê±£¬ÀýÈç£¬ÉíÌå²¿Î»~$B_b$~µÄÔË¶¯¾àÀë³¬¹ýãÐÖµÊ±£¬ÎÒÃÇÑ¡È¡~$f_b$~Ö¡£¨ÉíÌå²¿Î»~$B_b$~ÔÚÍ¼ÏñÉÏ¿ªÊ¼ÔË¶¯£© µ½~$f_i$~Ö¡£¨ÉíÌå²¿Î»~$B_b$~ÔÚÍ¼ÏñÉÏµÄÔË¶¯¾àÀë´ïµ½ãÐÖµ£©Ö®¼äµÄËùÓÐÖ¡£¬ÀûÓÃ~$f_b$~Ö¡µ½~$f_i$~Ö¡Ö®¼äÏàÁÚÖ¡¼äµÄ³íÃÜ¹âÁ÷»ñÈ¡µ½ÏñËØµãÖ®¼äµÄ¶ÔÓ¦¹ØÏµ£¬×îºóÀûÓÃ¹âÊøÆ½²î·¨¾Í¿ÉÒÔ»ñÈ¡ÉíÌå²¿Î»~$B_b$~µÄÈýÎ¬Ä£ÐÍ¡£
 
 Í¼~\ref{fig:dense_recons_gao}~Õ¹Ê¾ÁËÎÒÃÇÀûÓÃÑÇÏñËØ¼¶³íÃÜµã¶ÔÓ¦¹ØÏµÖØ½¨³öµÄ²»Í¬ÉíÌå²¿Î»µÄ³íÃÜÄ£ÐÍ¡£
 ÎÒÃÇÏÈ½«¹«Ê½~\eqref{eqn:BA}~ÖÐ~$P_k$~¿´×÷Î´Öª²ÎÊý£¬²¢½«Æä³õÊ¼Éî¶ÈÖµÉè¶¨Îª2Ã×µ½4Ã×Ö®¼äµÄËæ»úÖµ£¬È»ºóÓÃÏ¡Êè¹âÊøÆ½²î·¨¼ÆËã³öÈýÎ¬Ä£ÐÍ£¬½Ó×Å½«¹«Ê½~\eqref{eqn:BA}~ÖÐ~$r^b_j,\ t^b_j$~¿´×÷Î´ÖªÊý£¬´Ó¶øÓÅ»¯ÈËÌåµÄ×ËÌ¬²ÎÊý¡£
@@ -1049,7 +1046,7 @@ $\omega_d=1e^{-3}$~²»½ö¿ÉÒÔÓÃÀ´±ÜÃâÏàÁÚÈý½ÇÃæÆ¬¼ä·¢Éú½Ï´óµÄÐÎ±ä£¬»¹¼õÉÙ³íÃÜÄ£ÐÍÉ
 ¶ÔÓÚ±í~\ref{tb:tabel_parameter}~ÖÐÇ°Á½ÐÐÎÒÃÇÓÐ~6~¸ö²ÎÊýÐèÒªÈ·¶¨ÊýÖµ£¬µ«ÊÇ~$\rho_d$~±»ÉèÖÃÎª~0.5~À´¹éÒ»»¯¹«Ê½~\ref{eqn:clas_move}~ÖÐµÄÔË¶¯ÏîÄÜÁ¿¡£
 ´ËÍâ£¬ÒòÎª~\eqref{eqn:classifier}~ÖÐ~$\omega_s + \omega_j + \omega_m = 1$£¬ ËùÒÔ£¬ÎÒÃÇÖ»ÐèÒªÈ·¶¨~$\omega_s$£¬$\omega_j$£¬$\theta_s$~ºÍ~$\theta_j$~µÄÊýÖµ¡£
 ÊÜ~Kr{\"a}henb{\"u}hl~ºÍ~Koltun~ÔÚÎÄÕÂ~\cite{krahenbuhl2012efficient}ÖÐÈ·¶¨ºËº¯Êý²ÎÊýÊýÖµ·½·¨µÄÆô·¢£¬ÎÒÃÇÊ¹ÓÃ¸úËûÃÇÀàËÆµÄ·½·¨À´È·¶¨±í~\ref{tb:tabel_parameter}~ÖÐËùÌáµ½µÄ²ÎÊýÖµ¡£
-¾ßÌå¹ý³Ì¾ÍÊÇ£ºÊ×ÏÈ£¬ÎÒÃÇÊÖ¶¯±ê¶¨Í¬Ò»¸öÈË²»Í¬×ËÌ¬ÏÂ~20~ÕÅÍ¼Æ¬µÄÉíÌå²¿Î»×÷Îª¶ÔÕÕÊý¾Ý£»È»ºóÔÚ¸Ä±ä~$\omega_s$£¬$\omega_j$£¬$\theta_s$~ºÍ~$\theta_j$~ÖµµÄÍ¬Ê±Çó½â¹«Ê½~\eqref{eqn:classifier}£¬µÃµ½~20~ÕÅÍ¼Æ¬ÉÏÉíÌå²¿Î»µÄ·ÖÀà½á¹û£¬²¢¼ÆËãÉíÌå²¿Î»·ÖÀàµÄÎó²îÖµ£»×îÖÕÑ¡È¡Îó²î×îÐ¡Ê±µÄ $\omega_s$£¬$\omega_j$£¬$\theta_s$£¬$\theta_j$Öµ¡£
+¾ßÌå¹ý³Ì¾ÍÊÇ£ºÊ×ÏÈ£¬ÎÒÃÇÊÖ¶¯±ê¶¨Í¬Ò»¸öÈË²»Í¬×ËÌ¬ÏÂ~20~ÕÅÍ¼Æ¬µÄÉíÌå²¿Î»×÷Îª¶ÔÕÕÊý¾Ý£»È»ºóÔÚ¸Ä±ä~$\omega_s$£¬$\omega_j$£¬$\theta_s$~ºÍ~$\theta_j$~ÖµµÄÍ¬Ê±Çó½â¹«Ê½~\eqref{eqn:classifier}£¬µÃµ½~20~ÕÅÍ¼Æ¬ÉÏÉíÌå²¿Î»µÄ·ÖÀà½á¹û£¬²¢¼ÆËãÉíÌå²¿Î»·ÖÀàµÄÎó²îÖµ£»×îÖÕÑ¡È¡Îó²î×îÐ¡Ê±µÄ~$\omega_s$£¬$\omega_j$£¬$\theta_s$£¬$\theta_j$Öµ¡£
 ×îºóÔÙÓÃÍ¬ÑùµÄ·½·¨À´È·¶¨~$\theta_\alpha$~ºÍ~$\theta_\beta$~µÄÊýÖµ¡£
 
 
